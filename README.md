@@ -1,1 +1,324 @@
-# saidevac.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meesai.net - Crafting Modern Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font setup */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Very light, off-white background */
+            scroll-behavior: smooth;
+        }
+
+        /* Custom utility colors - Matching Oxygen.us style (Dark Charcoal Primary, Electric Blue Accent) */
+        .bg-primary { background-color: #1A1A1A; } /* Very Dark Charcoal / Near Black */
+        .text-accent { color: #00A9F4; } /* Bright Electric Blue */
+        .border-accent { border-color: #00A9F4; }
+        .hover\:bg-accent-dark:hover { background-color: #008ADF; } /* Darker Blue for hover */
+
+        /* App Card Modern Product Box Style */
+        .app-card-modern {
+            position: relative;
+            overflow: hidden;
+            background: #ffffff; /* Solid white background */
+            border-radius: 1.25rem; /* Large rounded corners */
+            border: 1px solid #e2e8f0; /* Subtle border */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, elevated shadow */
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .app-card-modern:hover {
+            transform: translateY(-12px); /* Significant lift on hover */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
+        }
+        
+        /* Icon Circle Style */
+        .app-icon-circle {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px; /* Full circle */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hero section background */
+        .hero-bg {
+            background-color: #1A1A1A; /* Dark Charcoal base */
+            /* Using a subtle dark gradient to mimic modern website depth */
+            background-image: radial-gradient(at 0% 0%, #303749 0%, #1A1A1A 70%); 
+        }
+
+        /* Simulating the separate pages with strong sections */
+        .app-detail-section {
+            min-height: 80vh;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar --><header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-gray-900">
+                meesai.<span class="text-accent">net</span>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="text-gray-600 hover:text-accent transition duration-300">Home</a>
+                <a href="#apps" class="text-gray-600 hover:text-accent transition duration-300">Apps</a>
+                <a href="#about" class="text-gray-600 hover:text-accent transition duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-accent transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Placeholder --><button class="md:hidden text-gray-600 hover:text-accent">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section --><section id="home" class="hero-bg text-white pt-24 pb-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+                    Crafting <span class="text-accent">Modern Software</span> Solutions
+                </h1>
+                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+                    From utility tools to deep financial insights, meesai.net builds robust, intuitive, and high-performing mobile applications that solve real problems.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#apps" class="px-8 py-3 text-lg font-semibold bg-accent text-white rounded-xl shadow-xl hover:bg-accent-dark transition duration-300 transform hover:scale-105">
+                        Explore Our Apps
+                    </a>
+                    <a href="#contact" class="px-8 py-3 text-lg font-semibold border-2 border-gray-400 text-white rounded-xl hover:bg-gray-700 hover:border-gray-700 transition duration-300 transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Apps Showcase Section --><section id="apps" class="py-24 bg-[#f0f4f8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-4">Our Portfolio of Innovation</h2>
+                <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Solutions engineered for efficiency, security, and exceptional user experience.
+                </p>
+
+                <!-- Apps Grid --><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <!-- App Card 1: Read On --><a href="#app-readon" class="app-card-modern block p-8">
+                        <div class="app-icon-circle bg-blue-100 mb-6" style="color: #00A9F4;">
+                            <!-- Icon/Emoji Placeholder --><span class="text-2xl" role="img" aria-label="Book">📚</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Read On</h3>
+                        <p class="text-gray-500 text-base mb-4">The ultimate reading companion. Effortlessly save web articles and send them to your Kindle as beautifully formatted EPUBs for distraction-free reading.</p>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm">Learn More &rarr;</span>
+                    </a>
+
+                    <!-- App Card 2: Bitcoin keyHunt --><a href="#app-bitcoinkeyhunt" class="app-card-modern block p-8">
+                        <div class="app-icon-circle bg-yellow-100 mb-6" style="color: #fbbf24;">
+                            <!-- Icon/Emoji Placeholder --><span class="text-2xl" role="img" aria-label="Key">🔑</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Bitcoin keyHunt</h3>
+                        <p class="text-gray-500 text-base mb-4">A secure utility designed for Bitcoin enthusiasts to manage and explore wallet key spaces with advanced search and generation features.</p>
+                        <span class="mt-4 inline-block text-yellow-600 font-semibold text-sm">Learn More &rarr;</span>
+                    </a>
+
+                    <!-- App Card 3: Yieldy --><a href="#app-yieldy" class="app-card-modern block p-8">
+                        <div class="app-icon-circle bg-green-100 mb-6" style="color: #22c55e;">
+                            <!-- Icon/Emoji Placeholder --><span class="text-2xl" role="img" aria-label="Chart">📈</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Yieldy</h3>
+                        <p class="text-gray-500 text-base mb-4">Smart finance tracking tool. Monitor dividend yields, manage investment portfolios, and project future returns with intuitive visualizations.</p>
+                        <span class="mt-4 inline-block text-green-600 font-semibold text-sm">Learn More &rarr;</span>
+                    </a>
+
+                    <!-- App Card 4: Payoff Turbo --><a href="#app-payoffturbo" class="app-card-modern block p-8">
+                        <div class="app-icon-circle bg-red-100 mb-6" style="color: #ef4444;">
+                            <!-- Icon/Emoji Placeholder --><span class="text-2xl" role="img" aria-label="House">🏠</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Payoff Turbo</h3>
+                        <p class="text-gray-500 text-base mb-4">A powerful debt reduction tool specifically tailored for Aussie Home Loans. Plan your repayments and save years off your mortgage.</p>
+                        <span class="mt-4 inline-block text-red-600 font-semibold text-sm">Learn More &rarr;</span>
+                    </a>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="text-xl font-medium text-gray-700 hover:text-accent transition duration-300 border-b-2 border-transparent hover:border-accent pb-1">
+                        See all apps on Google Play &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. App Detail Sections (Simulating Subdomains) --><!-- App Detail: Read On --><section id="app-readon" class="app-detail-section bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-bold text-accent mb-6">Read On - Distraction-Free Reading Delivered</h3>
+                <p class="text-xl mb-8 text-gray-700">
+                    The internet is full of amazing content, but also endless distractions. Read On cuts through the noise. It's built for the discerning reader who values deep focus. Our proprietary conversion engine strips away ads, pop-ups, and extraneous elements, converting complex web pages into clean, perfectly formatted EPUB files.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> **Kindle-Optimized:** Guaranteed beautiful formatting for all Kindle devices.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> **One-Tap Saving:** Send articles from any browser or share menu directly to your queue.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> **Offline Access:** Read your saved articles wherever you are, without an internet connection.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> **Queue Management:** Organize your backlog with tags and a simple, intuitive interface.</li>
+                    </ul>
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg border-l-4 border-accent">
+                        <h4 class="text-2xl font-semibold mb-3">Simulated Subdomain: readon.meesai.net</h4>
+                        <p class="text-gray-600">This section simulates a dedicated page. If this were a real application, this link would take you to **`readon.meesai.net`**.</p>
+                        <a href="https://play.google.com/store/apps/details?id=sai.meesai.readon" target="_blank" class="mt-4 inline-block px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-dark transition duration-300 shadow-md">Download on Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Detail: Bitcoin keyHunt --><section id="app-bitcoinkeyhunt" class="app-detail-section bg-[#f0f4f8] border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-bold text-yellow-500 mb-6">Bitcoin keyHunt - The Cryptographic Utility</h3>
+                <p class="text-xl mb-8 text-gray-700">
+                    Built for the advanced user, Bitcoin keyHunt provides powerful, secure, and offline tools for interacting with the Bitcoin cryptographic space. Whether you are generating highly customized vanity addresses, checking key safety, or conducting cryptographic research, this utility keeps your operations local and private.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-yellow-500 mr-3">✓</span> **Offline Generation:** All key creation and hunting happens entirely offline on your device for maximum security.</li>
+                        <li class="flex items-start"><span class="text-yellow-500 mr-3">✓</span> **Advanced Vanity Search:** Generate Bitcoin addresses matching specific custom patterns quickly and efficiently.</li>
+                        <li class="flex items-start"><span class="text-yellow-500 mr-3">✓</span> **BIP39 Compatibility:** Seamless integration with standard wallet recovery phrases.</li>
+                    </ul>
+                    <div class="p-8 bg-white rounded-xl shadow-lg border-l-4 border-yellow-500">
+                        <h4 class="text-2xl font-semibold mb-3">Simulated Subdomain: bitcoinkeyhunt.meesai.net</h4>
+                        <p class="text-gray-600">This link simulates a dedicated page: **`bitcoinkeyhunt.meesai.net`**.</p>
+                        <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" class="mt-4 inline-block px-6 py-3 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition duration-300 shadow-md">View App Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Detail: Yieldy --><section id="app-yieldy" class="app-detail-section bg-white border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-bold text-green-500 mb-6">Yieldy - Your Investment Portfolio Planner</h3>
+                <p class="text-xl mb-8 text-gray-700">
+                    Yieldy is the smart way to visualize and optimize your passive income streams. Forget complex spreadsheets; Yieldy gives you a clean, real-time overview of your dividends and fixed-income assets. Set goals, track performance against benchmarks, and make data-driven decisions to grow your wealth.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> **Dividend Forecast:** Project your monthly and annual income based on current holdings.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> **Visual Analytics:** Beautiful charts and graphs to understand allocation and growth at a glance.</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> **Goal Setting:** Create milestones for financial independence and watch your progress.</li>
+                    </ul>
+                    <div class="p-8 bg-gray-50 rounded-xl shadow-lg border-l-4 border-green-500">
+                        <h4 class="text-2xl font-semibold mb-3">Simulated Subdomain: yieldy.meesai.net</h4>
+                        <p class="text-gray-600">This link simulates a dedicated page: **`yieldy.meesai.net`**.</p>
+                        <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" class="mt-4 inline-block px-6 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition duration-300 shadow-md">View App Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Detail: Payoff Turbo --><section id="app-payoffturbo" class="app-detail-section bg-[#f0f4f8] border-b border-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-bold text-red-500 mb-6">Payoff Turbo - Aussie Home Loan Accelerator</h3>
+                <p class="text-xl mb-8 text-gray-700">
+                    Targeted specifically at the nuances of Australian mortgages, Payoff Turbo helps you find the fastest route to financial freedom. Input your current loan details, explore extra repayment scenarios, and instantly see how much interest and time you can save. It's the essential tool for every Australian homeowner looking to beat the bank.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> **Australian Tax and Finance Logic:** Accurate calculations based on local banking standards.</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> **Scenario Planning:** Test different lump sum payments or increased frequency to optimize your strategy.</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> **Intuitive Timeline:** See the exact date your mortgage will be fully paid off with current and proposed plans.</li>
+                    </ul>
+                    <div class="p-8 bg-white rounded-xl shadow-lg border-l-4 border-red-500">
+                        <h4 class="text-2xl font-semibold mb-3">Simulated Subdomain: payoffturbo.meesai.net</h4>
+                        <p class="text-gray-600">This link simulates a dedicated page: **`payoffturbo.meesai.net`**.</p>
+                        <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" class="mt-4 inline-block px-6 py-3 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600 transition duration-300 shadow-md">View App Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. About Section --><section id="about" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-6">About meesai.net</h2>
+                <div class="text-center text-xl text-gray-600 max-w-4xl mx-auto">
+                    <p class="mb-4">
+                        We are a small, passionate team dedicated to creating focused, high-utility software. Founded on the principle that the best tools are those that simplify complex tasks, meesai.net specializes in building mobile applications that are fast, reliable, and delightful to use.
+                    </p>
+                    <p class="mb-4">
+                        Our philosophy centers on **quality over quantity**. Every app we release is meticulously engineered, undergoes rigorous testing, and is designed with a clean, intuitive user experience in mind. We believe in providing solutions that genuinely improve productivity and financial well-being.
+                    </p>
+                    <p class="font-semibold text-accent mt-8 text-2xl">
+                        Innovation, Security, and User Focus: The three pillars of meesai.net.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Form Section --><section id="contact" class="py-24 bg-[#f0f4f8]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-6">Get In Touch</h2>
+                <p class="text-center text-xl text-gray-600 mb-12">
+                    Have a question about an app, a feature request, or an idea for a collaboration? We'd love to hear from you.
+                </p>
+
+                <form class="bg-white p-10 rounded-xl shadow-2xl border-t-8 border-accent">
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 text-lg font-semibold bg-accent text-white rounded-lg shadow-xl hover:bg-accent-dark transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                    <!-- Success/Error Message Area --><p id="form-message" class="mt-4 text-center text-base text-gray-500 hidden">
+                        Thank you for your message! We will get back to you shortly.
+                    </p>
+                </form>
+
+                <script>
+                    document.querySelector('form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        // This is a dummy handler since we don't have a backend to send email
+                        const messageBox = document.getElementById('form-message');
+                        messageBox.classList.remove('hidden');
+                        messageBox.textContent = "Thank you for contacting meesai.net! Your message has been received (simulated submission).";
+                        messageBox.classList.remove('text-gray-500', 'text-red-500');
+                        messageBox.classList.add('text-green-600');
+                        this.reset();
+                        setTimeout(() => {
+                            messageBox.classList.add('hidden');
+                        }, 5000);
+                    });
+                </script>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="bg-primary text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="mb-4 md:mb-0">&copy; 2024 meesai.net. All rights reserved.</p>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-accent transition duration-300">Privacy Policy</a>
+                <a href="#contact" class="hover:text-accent transition duration-300">Terms of Service</a>
+                <a href="mailto:info@meesai.net" class="hover:text-accent transition duration-300">info@meesai.net</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
