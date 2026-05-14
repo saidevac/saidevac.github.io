@@ -1,1 +1,204 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Melt</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #fafafa;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e4e4e7;
+                background: #0f0f1a;
+            }
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 2em;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            h2 {
+                border-color: #2a2a3e;
+            }
+        }
+
+        .effective {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 2em;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .effective {
+                color: #9ca3af;
+            }
+        }
+
+        a {
+            color: #6366f1;
+        }
+
+        ul {
+            padding-left: 1.2em;
+        }
+
+        li {
+            margin-bottom: 0.4em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Privacy Policy</h1>
+    <p class="effective"><strong>Effective date:</strong> May 14, 2026</p>
+
+    <p>
+        <strong>Melt</strong> ("the App", "we", "our") is committed to protecting your privacy.
+        This policy explains how we handle data when you use the App, particularly
+        the microphone permission used for voice input.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Microphone Audio (Voice Input)</h3>
+    <p>
+        When you tap the microphone button, the App accesses your device microphone
+        to capture speech audio. This audio is streamed in real time to
+        <strong>Google's Speech Recognition service</strong> (Android's built-in
+        <code>SpeechRecognizer</code> API) for transcription.
+    </p>
+    <p>
+        <strong>The App does not record, save, or store any audio files.</strong>
+        Audio is processed ephemerally — it exists only in transit between your
+        device microphone and Google's speech recognition servers. Once a
+        transcription result is returned, the audio stream is discarded.
+    </p>
+
+    <h3>1.2 Transcription Text</h3>
+    <p>
+        The text transcript returned by Google's speech recognition is used solely
+        to pre-fill the goal/task input field so you can create a goal or task by
+        voice. The transcript text is treated the same as any text you type manually.
+        It is stored only if you explicitly submit it as a goal or task.
+    </p>
+
+    <h3>1.3 Goals, Tasks, and Profile Data</h3>
+    <p>
+        Goals, tasks, and profile preferences you create are stored locally on your
+        device using Android's Room database. This data is never transmitted to our
+        servers (the App does not operate backend servers for user data).
+    </p>
+
+    <h3>1.4 AI Processing</h3>
+    <p>
+        When you submit a goal, the goal text is sent to an AI language model
+        provider (configurable via the App's governance settings) for task
+        decomposition. The AI provider receives only the goal text and your profile
+        preferences — no microphone audio or personal identifiers. See the
+        provider's own privacy policy for details on how they handle API requests.
+    </p>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+        <li><strong>Voice-to-text transcription</strong> — to convert your spoken
+            words into text for goal and task creation.</li>
+        <li><strong>AI task decomposition</strong> — to break down your goals into
+            actionable steps.</li>
+        <li><strong>Local persistence</strong> — to save your goals, tasks, and
+            preferences on your device.</li>
+    </ul>
+    <p>
+        We do <strong>not</strong> use your data for advertising, profiling, or
+        any purpose beyond the core functionality described above.
+    </p>
+
+    <h2>3. Data Sharing and Third Parties</h2>
+
+    <h3>3.1 Google Speech Recognition</h3>
+    <p>
+        Voice audio is processed by Google's speech recognition service, which is
+        part of the Android operating system. Google's handling of this data is
+        governed by the
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+        The App does not have access to raw audio after it is sent to Google.
+    </p>
+
+    <h3>3.2 AI Language Model Provider</h3>
+    <p>
+        Goal text and profile preferences are sent to the configured AI provider
+        (e.g., OpenRouter) for task decomposition. The provider receives only the
+        text you submit — no audio, device identifiers, or personal information.
+    </p>
+
+    <h3>3.3 No Sale of Data</h3>
+    <p>
+        We do <strong>not</strong> sell, rent, or trade your data with any third
+        party.
+    </p>
+
+    <h2>4. Data Retention and Storage</h2>
+    <ul>
+        <li><strong>Audio:</strong> Not stored. Processed ephemerally in transit.</li>
+        <li><strong>Transcription text:</strong> Stored only if you submit it as a
+            goal/task. Otherwise discarded when you navigate away.</li>
+        <li><strong>Goals, tasks, and profile:</strong> Stored locally on your
+            device until you delete them or uninstall the App.</li>
+    </ul>
+
+    <h2>5. Your Controls</h2>
+    <ul>
+        <li><strong>Microphone permission:</strong> You can grant or revoke the
+            <code>RECORD_AUDIO</code> permission at any time via
+            <em>Android Settings → Apps → Melt → Permissions</em>. The App
+            functions fully without this permission — only voice input is affected.
+        </li>
+        <li><strong>Data deletion:</strong> You can delete individual goals, tasks,
+            or reset all app data from the Settings screen within the App.
+            Uninstalling the App removes all locally stored data.</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+        Melt is not directed at children under the age of 13. We do not knowingly
+        collect personal information from children.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+        We may update this policy from time to time. Changes will be reflected at
+        this URL and the effective date will be updated accordingly.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+        If you have questions about this privacy policy, contact us at:
+        <br><a href="mailto:privacy@meesai.net">privacy@meesai.net</a>
+    </p>
+
+</body>
+
+</html>
