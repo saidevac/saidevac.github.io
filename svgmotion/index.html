@@ -2,248 +2,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meesai.net - Crafting Modern Software Solutions</title>
+    <title>SVGMotion — Free AI SVG Animation Studio · meesai.net</title>
+    <meta name="description" content="Free AI-assisted SVG animation studio in the browser — prompt to editable animated scene, export a plain interactive .svg with a callable player API. No sign-up, no ads, no watermarks, local-first.">
+    <link rel="canonical" href="https://meesai.net/svgmotion/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="meesai.net">
+    <meta property="og:title" content="SVGMotion — Free AI SVG Animation Studio · meesai.net">
+    <meta property="og:description" content="Free AI-assisted SVG animation studio in the browser — prompt to editable animated scene, export a plain interactive .svg with a callable player API. No sign-up, no ads, no watermarks, local-first.">
+    <meta property="og:url" content="https://meesai.net/svgmotion/">
+    <meta property="og:image" content="https://app.svgmotion.workers.dev/site-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SVGMotion — Free AI SVG Animation Studio · meesai.net">
+    <meta name="twitter:description" content="Free AI-assisted SVG animation studio in the browser — prompt to editable animated scene, export a plain interactive .svg with a callable player API. No sign-up, no ads, no watermarks, local-first.">
+    <meta name="twitter:image" content="https://app.svgmotion.workers.dev/site-og.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Custom font setup */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb; /* Very light, off-white background */
-            scroll-behavior: smooth;
-        }
-
-        /* Custom utility colors - Matching Oxygen.us style (Dark Charcoal Primary, Electric Blue Accent) */
-        .bg-primary { background-color: #1A1A1A; } /* Very Dark Charcoal / Near Black */
-        .text-accent { color: #00A9F4; } /* Bright Electric Blue */
-        .border-accent { border-color: #00A9F4; }
-        .hover\:bg-accent-dark:hover { background-color: #008ADF; } /* Darker Blue for hover */
-
-        /* App Card Modern Product Box Style */
-        .app-card-modern {
-            position: relative;
-            overflow: hidden;
-            background: #ffffff; /* Solid white background */
-            border-radius: 1.25rem; /* Large rounded corners */
-            border: 1px solid #e2e8f0; /* Subtle border */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, elevated shadow */
-            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .app-card-modern:hover {
-            transform: translateY(-12px); /* Significant lift on hover */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
-        }
-        
-        /* Icon Circle Style */
-        .app-icon-circle {
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 9999px; /* Full circle */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Hero section background */
-        .hero-bg {
-            background-color: #1A1A1A; /* Dark Charcoal base */
-            /* Using a subtle dark gradient to mimic modern website depth */
-            background-image: radial-gradient(at 0% 0%, #303749 0%, #1A1A1A 70%); 
-        }
-
-        /* Simulating the separate pages with strong sections */
-        .app-detail-section {
-            min-height: 80vh;
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; scroll-behavior: smooth; }
+        .bg-primary { background-color: #1A1A1A; }
+        .text-accent { color: #00A9F4; }
+        .app-icon-circle { width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:9999px;box-shadow:0 4px 8px rgba(0,0,0,.1); }
     </style>
-    <meta name="description" content="meesai.net builds focused mobile and web software — Read On (articles to Kindle), Bitcoin keyHunt, Yieldy dividend tracker, Payoff Turbo mortgage planner, and SVGMotion, a free AI SVG animation studio.">
-    <link rel="canonical" href="https://meesai.net/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="meesai.net">
-    <meta property="og:title" content="meesai.net - Crafting Modern Software Solutions">
-    <meta property="og:description" content="Focused, high-utility apps — Read On, Bitcoin keyHunt, Yieldy, Payoff Turbo, and SVGMotion, a free AI SVG animation studio.">
-    <meta property="og:url" content="https://meesai.net/">
-    <meta name="twitter:card" content="summary">
-    <meta name="google-site-verification" content="gu9EU_4qkokYV9TLoFJtVbXxKmzP8agFs2G20I8Ll2o" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XHPLPHL14"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SVGMotion","operatingSystem":"Web","applicationCategory":"DesignApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://app.svgmotion.workers.dev/","author":{"@type":"Organization","name":"meesai.net","url":"https://meesai.net"}}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XHPLPHL14"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-8XHPLPHL14');
 </script>
 </head>
 <body class="text-gray-800">
-
-    <!-- Navbar --><header class="sticky top-0 z-50 bg-white shadow-lg">
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-gray-900">
-                meesai.<span class="text-accent">net</span>
-            </a>
+            <a href="/" class="text-3xl font-extrabold text-gray-900">meesai.<span class="text-accent">net</span></a>
             <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#home" class="text-gray-600 hover:text-accent transition duration-300">Home</a>
-                <a href="#apps" class="text-gray-600 hover:text-accent transition duration-300">Apps</a>
-                <a href="#about" class="text-gray-600 hover:text-accent transition duration-300">About</a>
-                <a href="#contact" class="text-gray-600 hover:text-accent transition duration-300">Contact</a>
+                <a href="/" class="text-gray-600 hover:text-accent transition duration-300">Home</a>
+                <a href="/#apps" class="text-gray-600 hover:text-accent transition duration-300">Apps</a>
+                <a href="/#about" class="text-gray-600 hover:text-accent transition duration-300">About</a>
+                <a href="/#contact" class="text-gray-600 hover:text-accent transition duration-300">Contact</a>
             </div>
-            <!-- Mobile Menu Placeholder --><button class="md:hidden text-gray-600 hover:text-accent">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+            <a href="/#contact" class="md:hidden text-accent font-semibold">Contact</a>
         </nav>
     </header>
-
     <main>
-        <!-- 1. Hero Section --><section id="home" class="hero-bg text-white pt-24 pb-32">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-                    Crafting <span class="text-accent">Modern Software</span> Solutions
-                </h1>
-                <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-                    From utility tools to deep financial insights, meesai.net builds robust, intuitive, and high-performing mobile and web applications that solve real problems.
-                </p>
-                <div class="mt-10 flex justify-center space-x-4">
-                    <a href="#apps" class="px-8 py-3 text-lg font-semibold bg-accent text-white rounded-xl shadow-xl hover:bg-accent-dark transition duration-300 transform hover:scale-105">
-                        Explore Our Apps
-                    </a>
-                    <a href="#contact" class="px-8 py-3 text-lg font-semibold border-2 border-gray-400 text-white rounded-xl hover:bg-gray-700 hover:border-gray-700 transition duration-300 transform hover:scale-105">
-                        Get In Touch
-                    </a>
+        <section class="text-white py-20" style="background:linear-gradient(135deg,#7c3aed 0%,#4d36be 100%)">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center gap-8">
+                <div class="app-icon-circle bg-white/20 shrink-0" style="width:80px;height:80px"><span class="text-4xl">✦</span></div>
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">SVGMotion</h1>
+                    <p class="text-xl text-white/85 max-w-2xl">Free AI SVG animation studio — prompt a scene, edit it, export a plain .svg that stays interactive.</p>
                 </div>
             </div>
         </section>
-
-        <!-- 2. Apps Showcase Section --><section id="apps" class="py-24 bg-[#f0f4f8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center mb-4">Our Portfolio of Innovation</h2>
-                <p class="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-                    Solutions engineered for efficiency, security, and exceptional user experience.
-                </p>
-
-                <!-- Apps Grid --><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                    <!-- App Card 0: SVGMotion (featured) --><a href="/svgmotion/" class="app-card-modern p-8 border-2 border-purple-300 flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="app-icon-circle bg-purple-100 mb-0" style="color: #7c3aed;">
-                                <span class="text-2xl" role="img" aria-label="Sparkles">✦</span>
-                            </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide bg-purple-100 text-purple-700 rounded-full">New · Live</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">SVGMotion</h3>
-                        <p class="text-gray-500 text-base mb-4 flex-1">AI-assisted SVG animation studio in the browser. Prompt → editable scene → export a plain .svg that stays interactive. Free, local-first, no sign-up.</p>
-                        <span class="mt-auto pt-4 inline-block text-purple-600 font-semibold text-sm">Visit product page &rarr;</span>
-                    </a>
-
-                    <!-- App Card 1: Read On --><a href="/readon/" class="app-card-modern p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="app-icon-circle bg-blue-100 mb-0" style="color: #00A9F4;">
-                                <span class="text-2xl" role="img" aria-label="Book">📚</span>
-                            </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide bg-gray-100 text-gray-500 rounded-full">Android</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Read On</h3>
-                        <p class="text-gray-500 text-base mb-4 flex-1">The ultimate reading companion. Effortlessly save web articles and send them to your Kindle as beautifully formatted EPUBs for distraction-free reading.</p>
-                        <span class="mt-auto pt-4 inline-block text-accent font-semibold text-sm">Visit product page &rarr;</span>
-                    </a>
-
-                    <!-- App Card 2: Bitcoin keyHunt --><a href="/bitcoinkeyhunt/" class="app-card-modern p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="app-icon-circle bg-yellow-100 mb-0" style="color: #fbbf24;">
-                                <span class="text-2xl" role="img" aria-label="Key">🔑</span>
-                            </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide bg-gray-100 text-gray-500 rounded-full">Android</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Bitcoin keyHunt</h3>
-                        <p class="text-gray-500 text-base mb-4 flex-1">A secure utility designed for Bitcoin enthusiasts to manage and explore wallet key spaces with advanced search and generation features.</p>
-                        <span class="mt-4 inline-block text-yellow-600 font-semibold text-sm">Visit product page &rarr;</span>
-                    </a>
-
-                    <!-- App Card 3: Yieldy --><a href="/yieldy/" class="app-card-modern p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="app-icon-circle bg-green-100 mb-0" style="color: #22c55e;">
-                                <span class="text-2xl" role="img" aria-label="Chart">📈</span>
-                            </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide bg-gray-100 text-gray-500 rounded-full">Android</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Yieldy</h3>
-                        <p class="text-gray-500 text-base mb-4 flex-1">Smart finance tracking tool. Monitor dividend yields, manage investment portfolios, and project future returns with intuitive visualizations.</p>
-                        <span class="mt-4 inline-block text-green-600 font-semibold text-sm">Visit product page &rarr;</span>
-                    </a>
-
-                    <!-- App Card 4: Payoff Turbo --><a href="/payoffturbo/" class="app-card-modern p-8 flex flex-col">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="app-icon-circle bg-red-100 mb-0" style="color: #ef4444;">
-                                <span class="text-2xl" role="img" aria-label="House">🏠</span>
-                            </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide bg-gray-100 text-gray-500 rounded-full">Android</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Payoff Turbo</h3>
-                        <p class="text-gray-500 text-base mb-4 flex-1">A powerful debt reduction tool specifically tailored for Aussie Home Loans. Plan your repayments and save years off your mortgage.</p>
-                        <span class="mt-4 inline-block text-red-600 font-semibold text-sm">Visit product page &rarr;</span>
-                    </a>
-                </div>
-
-                <div class="mt-16 text-center">
-                    <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="text-xl font-medium text-gray-700 hover:text-accent transition duration-300 border-b-2 border-transparent hover:border-accent pb-1">
-                        See all apps on Google Play &rarr;
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. App Detail Sections (Simulating Subdomains) --><!-- App Detail: SVGMotion --><section id="app-svgmotion" class="app-detail-section bg-[#f0f4f8] border-b border-gray-100">
+        <section class="py-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest bg-purple-100 text-purple-700 rounded-full mb-5">Flagship &middot; Live web app</span>
-                    <h3 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3">SVG<span class="text-purple-600">Motion</span></h3>
-                    <p class="text-xl font-semibold text-purple-600 mb-5">Free AI SVG Animation Studio</p>
-                    <p class="text-lg text-gray-600">
-                        Most animation tools lock your output to their runtime — Rive needs .riv, Lottie needs lottie-web. SVGMotion exports a plain, self-contained <code class="bg-purple-50 px-1.5 py-0.5 rounded text-purple-700">.svg</code> that renders anywhere, yet stays interactive and callable from code.
-                    </p>
-                </div>
-
-                <!-- Feature grid -->
+                <p class="text-xl text-gray-700 max-w-4xl mb-12">
+                    Most vector animation tools lock your output to their runtime — Rive needs .riv, Lottie needs lottie-web. SVGMotion is built the other way around: the export is a self-contained <code class="bg-purple-50 px-1.5 py-0.5 rounded text-purple-700">.svg</code> file that renders anywhere a browser does, yet stays interactive and callable from JavaScript. Describe a scene, edit keyframes and state machines, bake physics, and ship a file that needs no runtime, no account, and no watermarks.
+                </p>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🎨</div>
-                        <h5 class="font-bold text-lg mb-2">Three studios, one format</h5>
+                        <h3 class="font-bold text-lg mb-2">Three studios, one format</h3>
                         <p class="text-gray-600 text-sm">Vector Editor for animated scenes, Character Studio for rigged worlds, Asset Studio for OS-ready icon bundles.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">📞</div>
-                        <h5 class="font-bold text-lg mb-2">Callable exports</h5>
+                        <h3 class="font-bold text-lg mb-2">Callable exports</h3>
                         <p class="text-gray-600 text-sm">Every .svg embeds a tiny player API — <code class="text-purple-700">player.call('launch')</code>, <code class="text-purple-700">setInput()</code> — drive it from your code.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">⚡</div>
-                        <h5 class="font-bold text-lg mb-2">Bake-then-play physics</h5>
+                        <h3 class="font-bold text-lg mb-2">Bake-then-play physics</h3>
                         <p class="text-gray-600 text-sm">Bounce, roll, pendulum &amp; more are simulated once into ordinary keyframes — no engine ships with your file.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🔒</div>
-                        <h5 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h5>
+                        <h3 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h3>
                         <p class="text-gray-600 text-sm">Projects stay in your browser and it works offline. Bring your own Ollama, OpenRouter, or OpenAI key — or the in-browser WebGPU engine.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🆓</div>
-                        <h5 class="font-bold text-lg mb-2">Free forever</h5>
+                        <h3 class="font-bold text-lg mb-2">Free forever</h3>
                         <p class="text-gray-600 text-sm">No sign-up, no ads, no watermarks on exports. Open source under MIT.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🧩</div>
-                        <h5 class="font-bold text-lg mb-2">Remixable gallery</h5>
+                        <h3 class="font-bold text-lg mb-2">Remixable gallery</h3>
                         <p class="text-gray-600 text-sm">Every gallery item is a real export — call its methods, preview it, or open it as an editable copy.</p>
                     </div>
                 </div>
-
-                <!-- CTA banner -->
                 <div class="rounded-2xl shadow-xl p-8 sm:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6" style="background:linear-gradient(135deg,#7c3aed 0%,#4d36be 100%)">
                     <div>
-                        <h4 class="text-2xl font-bold mb-2">Live now — no install, no account</h4>
+                        <h2 class="text-2xl font-bold mb-2">Live now — no install, no account</h2>
                         <p class="text-purple-100 max-w-xl">Runs entirely in your browser. Type a prompt like &ldquo;a rocket that launches on click&rdquo;, edit it, export a callable .svg.</p>
                     </div>
                     <div class="flex flex-wrap gap-3 shrink-0">
@@ -251,12 +104,13 @@
                         <a href="https://app.svgmotion.workers.dev/gallery" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border-2 border-purple-200 text-white rounded-lg font-semibold hover:bg-white/10 transition duration-300">Browse the gallery</a>
                     </div>
                 </div>
-
-                <!-- Live gallery — real interactive .svg exports embedded directly -->
-                <div class="mt-14">
-                    <h4 class="text-2xl font-bold text-center mb-2">Live from the gallery</h4>
-                    <p class="text-center text-gray-500 mb-8">These are real SVGMotion exports running on this page — each one a plain <code>.svg</code> scene, no runtime, no iframe. Hover and click them.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            </div>
+        </section>
+        <section class="py-16 bg-[#f0f4f8]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-2">Live from the gallery</h2>
+                <p class="text-center text-gray-500 mb-10">Real SVGMotion exports running on this page — each a plain <code>.svg</code> scene, no runtime, no iframe. Hover and click them.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
 <div class="bg-white rounded-xl shadow-md p-3 border border-purple-100 hover:shadow-xl transition duration-300">
                     <div style="aspect-ratio:5/4;width:100%;margin:auto;cursor:pointer"></div>
 <script>{
@@ -668,230 +522,19 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
                         <a href="https://app.svgmotion.workers.dev/gallery/idea-bulb" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold border border-purple-300 text-purple-700 rounded-md hover:bg-purple-50 transition">Open in gallery</a>
                     </div>
                 </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-<!-- App Detail: Read On --><section id="app-readon" class="app-detail-section bg-white border-b border-gray-100">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold text-accent mb-6">Read On - Distraction-Free Reading Delivered</h3>
-                <p class="text-xl mb-8 text-gray-700">
-                    The internet is full of amazing content, but also endless distractions. Read On cuts through the noise. It's built for the discerning reader who values deep focus. Our proprietary conversion engine strips away ads, pop-ups, and extraneous elements, converting complex web pages into clean, perfectly formatted EPUB files.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> <strong>Kindle-Optimized:</strong> Guaranteed beautiful formatting for all Kindle devices.</li>
-                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> <strong>One-Tap Saving:</strong> Send articles from any browser or share menu directly to your queue.</li>
-                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> <strong>Offline Access:</strong> Read your saved articles wherever you are, without an internet connection.</li>
-                        <li class="flex items-start"><span class="text-accent mr-3">✓</span> <strong>Queue Management:</strong> Organize your backlog with tags and a simple, intuitive interface.</li>
-                    </ul>
-                    <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#00A9F4 0%,#0077b6 100%)">
-                        <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Read On on Google Play</h4>
-                            <p class="text-white/85 mb-6">Free on Android. Save an article from any browser and it lands on your Kindle, beautifully typeset.</p>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=sai.meesai.readon" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- App Detail: Bitcoin keyHunt --><section id="app-bitcoinkeyhunt" class="app-detail-section bg-[#f0f4f8] border-b border-gray-100 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <h3 class="text-4xl font-bold text-yellow-500 mb-6">Bitcoin keyHunt - The Cryptographic Utility</h3>
-        
-        <p class="text-xl mb-12 text-gray-700">
-            Built for the advanced user, Bitcoin keyHunt provides powerful, secure, and offline tools for interacting with the Bitcoin cryptographic space. Below, you can find the app link and two videos detailing the mystery of the 32 BTC puzzles and how the tool helps you explore them.
-        </p>
-
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            
-            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col justify-center items-center border-t-4 border-yellow-500 hover:shadow-2xl transition duration-300">
-                <h4 class="text-2xl font-semibold mb-6 text-gray-800">Get the App</h4>
-                <a href="https://play.google.com/store/apps/details?id=com.saidev.bitcoinkeyhunt" target="_blank" rel="noopener" class="block">
-                    <img 
-                        alt="Get it on Google Play" 
-                        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                        class="h-16 transition-transform hover:scale-105 duration-300" 
-                    />
-                </a>
-                <p class="text-center text-sm text-gray-500 mt-4">Offline. Private. No Subscriptions.</p>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-t-4 border-yellow-500">
-                <div class="aspect-video w-full">
-                    <iframe 
-                        class="w-full h-full" 
-                        src="https://www.youtube.com/embed/IlaP7b62Rxs" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Bitcoin keyHunt Treasure Map</h4>
-                    <p class="text-sm text-yellow-500 mb-3">Channel: saidev</p>
-                    <p class="text-gray-600 text-base">
-                        This video introduces the concept of the <strong>digital treasure hunt</strong> for the legendary 32 Bitcoin puzzles. It outlines the app's core philosophy—<strong>no ads, no tracking</strong>—and highlights its features like <strong>grid-based exploration</strong> and on-chain status checks.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=IlaP7b62Rxs" target="_blank" class="mt-4 inline-block text-yellow-500 font-medium hover:text-yellow-600 transition duration-300">Watch Video [00:00:00]</a>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-t-4 border-yellow-500">
-                <div class="aspect-video w-full">
-                    <iframe 
-                        class="w-full h-full" 
-                        src="https://www.youtube.com/embed/juMiSYfFfyA" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Bitcoin KeyHunt Guide</h4>
-                    <p class="text-sm text-yellow-500 mb-3">Channel: saidev</p>
-                    <p class="text-gray-600 text-base">
-                        Learn the practical steps of the app's workflow. The guide demonstrates how to use the <strong>visual bit grid</strong> to assemble a potential private key and how the <strong>one-tap on-chain check</strong> instantly verifies its status, all while emphasizing <strong>local-first privacy</strong>.
-                    </p>
-                    <a href="https://www.youtube.com/watch?v=juMiSYfFfyA" target="_blank" class="mt-4 inline-block text-yellow-500 font-medium hover:text-yellow-600 transition duration-300">Watch Video [00:00:00]</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-        <!-- App Detail: Yieldy --><section id="app-yieldy" class="app-detail-section bg-white border-b border-gray-100">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold text-green-500 mb-6">Yieldy - Your Investment Portfolio Planner</h3>
-                <p class="text-xl mb-8 text-gray-700">
-                    Yieldy is the smart way to visualize and optimize your passive income streams. Forget complex spreadsheets; Yieldy gives you a clean, real-time overview of your dividends and fixed-income assets. Set goals, track performance against benchmarks, and make data-driven decisions to grow your wealth.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> <strong>Dividend Forecast:</strong> Project your monthly and annual income based on current holdings.</li>
-                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> <strong>Visual Analytics:</strong> Beautiful charts and graphs to understand allocation and growth at a glance.</li>
-                        <li class="flex items-start"><span class="text-green-500 mr-3">✓</span> <strong>Goal Setting:</strong> Create milestones for financial independence and watch your progress.</li>
-                    </ul>
-                    <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#22c55e 0%,#15803d 100%)">
-                        <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Yieldy on Google Play</h4>
-                            <p class="text-white/85 mb-6">Track dividends, project income, and plan your portfolio — free on Android.</p>
-                        </div>
-                        <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- App Detail: Payoff Turbo --><section id="app-payoffturbo" class="app-detail-section bg-[#f0f4f8] border-b border-gray-100">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold text-red-500 mb-6">Payoff Turbo - Aussie Home Loan Accelerator</h3>
-                <p class="text-xl mb-8 text-gray-700">
-                    Targeted specifically at the nuances of Australian mortgages, Payoff Turbo helps you find the fastest route to financial freedom. Input your current loan details, explore extra repayment scenarios, and instantly see how much interest and time you can save. It's the essential tool for every Australian homeowner looking to beat the bank.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> <strong>Australian Tax and Finance Logic:</strong> Accurate calculations based on local banking standards.</li>
-                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> <strong>Scenario Planning:</strong> Test different lump sum payments or increased frequency to optimize your strategy.</li>
-                        <li class="flex items-start"><span class="text-red-500 mr-3">✓</span> <strong>Intuitive Timeline:</strong> See the exact date your mortgage will be fully paid off with current and proposed plans.</li>
-                    </ul>
-                    <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#ef4444 0%,#b91c1c 100%)">
-                        <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Payoff Turbo on Google Play</h4>
-                            <p class="text-white/85 mb-6">Model extra repayments and see the day your mortgage hits zero — free on Android.</p>
-                        </div>
-                        <a href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 4. About Section --><section id="about" class="py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center mb-6">About meesai.net</h2>
-                <div class="text-center text-xl text-gray-600 max-w-4xl mx-auto">
-                    <p class="mb-4">
-                        We are a small, passionate team dedicated to creating focused, high-utility software. Founded on the principle that the best tools are those that simplify complex tasks, meesai.net specializes in building mobile applications that are fast, reliable, and delightful to use.
-                    </p>
-                    <p class="mb-4">
-                        Our philosophy centers on <strong>quality over quantity</strong>. Every app we release is meticulously engineered, undergoes rigorous testing, and is designed with a clean, intuitive user experience in mind. We believe in providing solutions that genuinely improve productivity and financial well-being.
-                    </p>
-                    <p class="font-semibold text-accent mt-8 text-2xl">
-                        Innovation, Security, and User Focus: The three pillars of meesai.net.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Contact Form Section --><section id="contact" class="py-24 bg-[#f0f4f8]">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center mb-6">Get In Touch</h2>
-                <p class="text-center text-xl text-gray-600 mb-12">
-                    Have a question about an app, a feature request, or an idea for a collaboration? We'd love to hear from you.
-                </p>
-
-                <form class="bg-white p-10 rounded-xl shadow-2xl border-t-8 border-accent">
-                    <div class="mb-6">
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
-                    </div>
-                    <div class="mb-6">
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150">
-                    </div>
-                    <div class="mb-8">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-accent/50 focus:border-accent transition duration-150"></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 text-lg font-semibold bg-accent text-white rounded-lg shadow-xl hover:bg-accent-dark transition duration-300 transform hover:scale-[1.01]">
-                        Send Message
-                    </button>
-                    <!-- Success/Error Message Area --><p id="form-message" class="mt-4 text-center text-base text-gray-500 hidden">
-                        Thank you for your message! We will get back to you shortly.
-                    </p>
-                </form>
-
-                <script>
-                    document.querySelector('form').addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        // This is a dummy handler since we don't have a backend to send email
-                        const messageBox = document.getElementById('form-message');
-                        messageBox.classList.remove('hidden');
-                        messageBox.textContent = "Thank you for contacting meesai.net! Your message has been received (simulated submission).";
-                        messageBox.classList.remove('text-gray-500', 'text-red-500');
-                        messageBox.classList.add('text-green-600');
-                        this.reset();
-                        setTimeout(() => {
-                            messageBox.classList.add('hidden');
-                        }, 5000);
-                    });
-                </script>
-            </div>
-        </section>
-
     </main>
-
-    <!-- Footer --><footer class="bg-primary text-white py-10">
+    <footer class="bg-primary text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
             <p class="mb-4 md:mb-0">&copy; 2026 meesai.net. All rights reserved.</p>
             <div class="space-x-6">
-                <a href="#about" class="hover:text-accent transition duration-300">Privacy Policy</a>
-                <a href="#contact" class="hover:text-accent transition duration-300">Terms of Service</a>
+                <a href="/#about" class="hover:text-accent transition duration-300">Privacy Policy</a>
+                <a href="/#contact" class="hover:text-accent transition duration-300">Terms of Service</a>
                 <a href="mailto:info@meesai.net" class="hover:text-accent transition duration-300">info@meesai.net</a>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
