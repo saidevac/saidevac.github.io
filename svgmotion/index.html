@@ -551,6 +551,42 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
                 </div>
             </div>
         </section>
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-2">Watch it in action</h2>
+                <p class="text-center text-gray-500 mb-10">Prompt &rarr; scene &rarr; callable .svg — see the app work.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                    <div class="md:col-span-2 bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
+                        <div class="aspect-video w-full">
+                            <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="7OoTwcL0uiY" role="button" tabindex="0" aria-label="Play SVGMotion demo video">
+                                <img src="https://i.ytimg.com/vi/7OoTwcL0uiY/hqdefault.jpg" alt="SVGMotion demo video thumbnail" class="w-full h-full object-cover" loading="lazy" width="480" height="360">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 flex items-center justify-between">
+                            <p class="text-sm font-semibold text-gray-700">SVGMotion walkthrough</p>
+                            <a href="https://youtu.be/7OoTwcL0uiY" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition" aria-label="Watch the SVGMotion walkthrough on YouTube">Watch on YouTube &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300 max-w-xs mx-auto w-full">
+                        <div style="aspect-ratio:9/16">
+                            <div class="yt-facade cursor-pointer relative group w-full h-full" data-yt="XQQAlOLs--Q" role="button" tabindex="0" aria-label="Play SVGMotion short video">
+                                <img src="https://i.ytimg.com/vi/XQQAlOLs--Q/hqdefault.jpg" alt="SVGMotion short video thumbnail" class="w-full h-full object-cover" loading="lazy" width="480" height="360">
+                                <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                    <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 flex items-center justify-between">
+                            <p class="text-sm font-semibold text-gray-700">Quick short</p>
+                            <a href="https://youtube.com/shorts/XQQAlOLs--Q" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition" aria-label="Watch the SVGMotion short on YouTube">Watch on YouTube &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="bg-primary text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
@@ -562,6 +598,21 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
             </div>
         </div>
     </footer>
+<script>
+document.querySelectorAll('.yt-facade').forEach(function(el){
+  function load(){
+    var f=document.createElement('iframe');
+    f.className='w-full h-full';
+    f.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1';
+    f.title='YouTube video player';
+    f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    f.setAttribute('allowfullscreen','');
+    el.replaceWith(f);
+  }
+  el.addEventListener('click',load);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+});
+</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d5c39f9ad3df4b03b72918744f0e0b60"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
