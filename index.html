@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,8 @@
     <title>meesai.net - Crafting Modern Software Solutions</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/tailwind.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* Custom font setup */
@@ -215,32 +217,32 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🎨</div>
-                        <h5 class="font-bold text-lg mb-2">Three studios, one format</h5>
+                        <h4 class="font-bold text-lg mb-2">Three studios, one format</h4>
                         <p class="text-gray-600 text-sm">Vector Editor for animated scenes, Character Studio for rigged worlds, Asset Studio for OS-ready icon bundles.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">📞</div>
-                        <h5 class="font-bold text-lg mb-2">Callable exports</h5>
+                        <h4 class="font-bold text-lg mb-2">Callable exports</h4>
                         <p class="text-gray-600 text-sm">Every .svg embeds a tiny player API — <code class="text-purple-700">player.call('launch')</code>, <code class="text-purple-700">setInput()</code> — drive it from your code.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">⚡</div>
-                        <h5 class="font-bold text-lg mb-2">Bake-then-play physics</h5>
+                        <h4 class="font-bold text-lg mb-2">Bake-then-play physics</h4>
                         <p class="text-gray-600 text-sm">Bounce, roll, pendulum &amp; more are simulated once into ordinary keyframes — no engine ships with your file.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🔒</div>
-                        <h5 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h5>
+                        <h4 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h4>
                         <p class="text-gray-600 text-sm">Projects stay in your browser and it works offline. Bring your own Ollama, OpenRouter, or OpenAI key — or the in-browser WebGPU engine.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🆓</div>
-                        <h5 class="font-bold text-lg mb-2">Free forever</h5>
+                        <h4 class="font-bold text-lg mb-2">Free forever</h4>
                         <p class="text-gray-600 text-sm">No sign-up, no ads, no watermarks on exports. Open source under MIT.</p>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md border-t-4 border-purple-500">
                         <div class="text-3xl mb-3">🧩</div>
-                        <h5 class="font-bold text-lg mb-2">Remixable gallery</h5>
+                        <h4 class="font-bold text-lg mb-2">Remixable gallery</h4>
                         <p class="text-gray-600 text-sm">Every gallery item is a real export — call its methods, preview it, or open it as an editable copy.</p>
                     </div>
                 </div>
@@ -719,7 +721,7 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
                     <img 
                         alt="Get it on Google Play" 
                         src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                        class="h-16 transition-transform hover:scale-105 duration-300" 
+                        class="h-16 transition-transform hover:scale-105 duration-300" width="165" height="64" 
                     />
                 </a>
                 <p class="text-center text-sm text-gray-500 mt-4">Offline. Private. No Subscriptions.</p>
@@ -728,14 +730,12 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
             
             <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-t-4 border-yellow-500">
                 <div class="aspect-video w-full">
-                    <iframe 
-                        class="w-full h-full" 
-                        src="https://www.youtube.com/embed/IlaP7b62Rxs" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+                    <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="IlaP7b62Rxs" role="button" tabindex="0" aria-label="Play YouTube video">
+                    <img src="https://i.ytimg.com/vi/IlaP7b62Rxs/hqdefault.jpg" alt="YouTube video thumbnail" class="w-full h-full object-cover" loading="lazy" width="480" height="360">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                    </div>
+                </div>
                 </div>
                 <div class="p-6">
                     <h4 class="text-xl font-semibold mb-2 text-gray-800">Bitcoin keyHunt Treasure Map</h4>
@@ -749,14 +749,12 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
             
             <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border-t-4 border-yellow-500">
                 <div class="aspect-video w-full">
-                    <iframe 
-                        class="w-full h-full" 
-                        src="https://www.youtube.com/embed/juMiSYfFfyA" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+                    <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="juMiSYfFfyA" role="button" tabindex="0" aria-label="Play YouTube video">
+                    <img src="https://i.ytimg.com/vi/juMiSYfFfyA/hqdefault.jpg" alt="YouTube video thumbnail" class="w-full h-full object-cover" loading="lazy" width="480" height="360">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                    </div>
+                </div>
                 </div>
                 <div class="p-6">
                     <h4 class="text-xl font-semibold mb-2 text-gray-800">Bitcoin KeyHunt Guide</h4>
@@ -899,5 +897,20 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
         </div>
     </footer>
 
+<script>
+document.querySelectorAll('.yt-facade').forEach(function(el){
+  function load(){
+    var f=document.createElement('iframe');
+    f.className='w-full h-full';
+    f.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1';
+    f.title='YouTube video player';
+    f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    f.setAttribute('allowfullscreen','');
+    el.replaceWith(f);
+  }
+  el.addEventListener('click',load);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+});
+</script>
 </body>
 </html>
