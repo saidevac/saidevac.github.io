@@ -17,6 +17,9 @@ on:
       - 'releases.json'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   indexnow:
     runs-on: ubuntu-latest
