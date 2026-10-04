@@ -3,8 +3,8 @@
     "svgmotion": {
       "name": "SVGMotion",
       "url": "https://meesai.net/svgmotion/",
-      "app_url": "https://app.svgmotion.workers.dev/",
-      "press": "https://app.svgmotion.workers.dev/press",
+      "app_url": "https://app.svgmotion.meesai.net/",
+      "press": "https://app.svgmotion.meesai.net/press",
       "icon": "svgmotion/icon-512.png",
       "shots": ["svgmotion/shot-editor.png", "svgmotion/shot-landing.png", "svgmotion/shot-gallery.png"],
       "tagline": "Free AI SVG animation studio",
@@ -16,14 +16,14 @@
           "I built a free AI SVG animation studio that exports plain .svg files — no runtime needed",
           "Show: SVGMotion — prompt to animated SVG, local-first, exports self-contained .svg"
         ],
-        "body": "Hey — I built SVGMotion, a free AI-assisted SVG animation studio.\n\nWhat it does: you describe a scene, it generates editable layers + keyframes, and you export a plain `.svg` file. The animation is baked into the markup — it plays in any `<img>` tag with no player JS, no Lottie JSON.\n\nWhy I built it: I wanted Rive-style iteration without the runtime dependency or the pricing.\n\nStack notes: browser-native ES modules, BYOK AI (Ollama/OpenRouter/OpenAI), local-first storage in IndexedDB. Fully open source.\n\nSite: https://meesai.net/svgmotion/\nLive editor: https://app.svgmotion.workers.dev/\nSource: https://github.com/saidevac\n\nFeedback welcome — especially on the export format."
+        "body": "Hey — I built SVGMotion, a free AI-assisted SVG animation studio.\n\nWhat it does: you describe a scene, it generates editable layers + keyframes, and you export a plain `.svg` file. The animation is baked into the markup — it plays in any `<img>` tag with no player JS, no Lottie JSON.\n\nWhy I built it: I wanted Rive-style iteration without the runtime dependency or the pricing.\n\nStack notes: browser-native ES modules, BYOK AI (Ollama/OpenRouter/OpenAI), local-first storage in IndexedDB. Fully open source.\n\nSite: https://meesai.net/svgmotion/\nLive editor: https://app.svgmotion.meesai.net/\nSource: https://github.com/saidevac\n\nFeedback welcome — especially on the export format."
       },
       "showhn": {
         "title_options": [
           "Show HN: SVGMotion — AI SVG animation studio that exports runtime-free .svg files",
           "Show HN: Local-first AI SVG animator — export plain .svg, no player needed"
         ],
-        "text": "Hi HN — I built SVGMotion, an AI-assisted SVG animation studio.\n\nThe pitch: describe a scene, edit the generated layers/keyframes/physics, and export a plain .svg file. The animation is baked into the markup — plays anywhere an SVG renders, zero runtime.\n\nIt's local-first (browser IndexedDB), open source, and the AI is BYOK — works fully offline with Ollama.\n\nEditor: https://app.svgmotion.workers.dev/\nProduct page: https://meesai.net/svgmotion/\n\nHappy to answer questions about the baking/export approach."
+        "text": "Hi HN — I built SVGMotion, an AI-assisted SVG animation studio.\n\nThe pitch: describe a scene, edit the generated layers/keyframes/physics, and export a plain .svg file. The animation is baked into the markup — plays anywhere an SVG renders, zero runtime.\n\nIt's local-first (browser IndexedDB), open source, and the AI is BYOK — works fully offline with Ollama.\n\nEditor: https://app.svgmotion.meesai.net/\nProduct page: https://meesai.net/svgmotion/\n\nHappy to answer questions about the baking/export approach."
       }
     },
     "readon": {
