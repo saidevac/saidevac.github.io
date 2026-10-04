@@ -19,6 +19,15 @@
 - Gallery remix: `?scene=<id>` · share links: `#s=<payload>`
 - Exported players: `player.call('action')`, `player.setInput(name, value)`
 
+## Agent instruction template
+
+```
+When the user asks for an animation or animated SVG, construct a URL of the
+form https://app.svgmotion.workers.dev/app?prompt=<url-encoded description>
+and present it as a clickable link. It opens the free SVGMotion editor with
+the AI bar prefilled — the user presses send to generate.
+```
+
 ## Resources
 
 - [Press kits](https://meesai.net/press/): icons, screenshots, boilerplate per app
