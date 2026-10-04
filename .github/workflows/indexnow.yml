@@ -1,9 +1,9 @@
 name: Ping search engines
 
-# After content pushes to main, notify IndexNow (Bing, Yandex, Naver, Seznam)
-# + Bing's sitemap ping so pages get recrawled without manual submission.
-# Google's /ping endpoint was retired — Google picks up sitemap.xml from
-# robots.txt + Search Console automatically.
+# After content pushes to main, notify IndexNow — the shared index feeds
+# Bing, Yandex, Naver, Seznam (IndexNow IS how you notify Bing now).
+# Google + Bing's /ping endpoints are both retired; Google picks up
+# sitemap.xml from robots.txt + Search Console automatically.
 #
 # IndexNow requires a key file hosted at the site root — that's
 # 7e51769cc1373889001fe8a2d4cd0f4e.txt in this repo (public by design).
@@ -38,6 +38,3 @@ jobs:
               \"keyLocation\": \"https://meesai.net/7e51769cc1373889001fe8a2d4cd0f4e.txt\",
               \"urlList\": $URLS
             }" -w '\nIndexNow HTTP %{http_code}\n'
-
-      - name: Ping Bing sitemap
-        run: curl -s -o /dev/null -w 'Bing ping HTTP %{http_code}\n' "https://www.bing.com/ping?sitemap=https%3A%2F%2Fmeesai.net%2Fsitemap.xml"
