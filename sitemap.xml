@@ -5,4 +5,8 @@
   <url><loc>https://meesai.net/readon/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://meesai.net/yieldy/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://meesai.net/payoffturbo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meesai.net/press/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://meesai.net/readon/press/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://meesai.net/yieldy/press/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://meesai.net/payoffturbo/press/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 </urlset>
