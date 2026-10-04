@@ -554,36 +554,97 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
         <section class="py-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-2">See SVGMotion in action</h2>
-                <p class="text-center text-gray-500 mb-10">A quick overview of the app — what it makes and why the exports matter.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-                    <div class="md:col-span-2 bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
-                        <div class="aspect-video w-full">
-                            <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="7OoTwcL0uiY" role="button" tabindex="0" aria-label="Play SVGMotion demo video">
-                                <img src="https://i.ytimg.com/vi/7OoTwcL0uiY/maxresdefault.jpg" alt="SVGMotion demo video thumbnail" class="w-full h-full object-cover" loading="lazy" width="1280" height="720">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
-                                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                <p class="text-center text-gray-500 mb-10">Step-by-step walkthroughs of each studio, plus a quick overview.</p>
+                <style>
+                .yt-car-track{scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none}
+                .yt-car-track::-webkit-scrollbar{display:none}
+                .yt-car-slide{flex:0 0 100%;scroll-snap-align:start}
+                .yt-car-btn{position:absolute;top:38%;z-index:10;width:42px;height:42px;border:0;border-radius:9999px;background:rgba(88,58,220,.92);color:#fff;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);cursor:pointer;transition:transform .2s,opacity .2s}
+                .yt-car-btn:hover{transform:scale(1.08)}
+                .yt-car-btn[disabled]{opacity:.3;pointer-events:none}
+                .yt-car-prev{left:10px}.yt-car-next{right:10px}
+                .yt-car-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+                .yt-car-dot{width:9px;height:9px;border:0;border-radius:9999px;background:#d3c9f5;padding:0;cursor:pointer;transition:background .2s,width .2s}
+                .yt-car-dot.on{background:#6a4fd8;width:22px}
+                </style>
+                <div class="yt-carousel relative max-w-4xl mx-auto">
+                    <div class="yt-car-track flex overflow-x-auto">
+                        <div class="yt-car-slide">
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
+                                <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="5Qt1prdnr60" role="button" tabindex="0" aria-label="Play the Vector Editor tutorial">
+                                    <img src="https://i.ytimg.com/vi/5Qt1prdnr60/maxresdefault.jpg" alt="Vector Editor tutorial thumbnail" class="w-full h-full object-cover" loading="lazy" width="1280" height="720">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                        <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between gap-2">
+                                    <p class="text-xs font-semibold text-gray-700">Vector Editor — prompt → scene → bake → export</p>
+                                    <a href="https://youtu.be/5Qt1prdnr60" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition whitespace-nowrap" aria-label="Watch the Vector Editor tutorial on YouTube">Watch on YouTube &rarr;</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-4 flex items-center justify-between">
-                            <p class="text-sm font-semibold text-gray-700">SVGMotion overview &amp; explainer</p>
-                            <a href="https://youtu.be/7OoTwcL0uiY" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition" aria-label="Watch the SVGMotion overview &amp; explainer on YouTube">Watch on YouTube &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300 max-w-xs mx-auto w-full">
-                        <div style="aspect-ratio:9/16">
-                            <div class="yt-facade cursor-pointer relative group w-full h-full" data-yt="XQQAlOLs--Q" role="button" tabindex="0" aria-label="Play SVGMotion short video">
-                                <img src="https://i.ytimg.com/vi/XQQAlOLs--Q/oar2.jpg" alt="SVGMotion short video thumbnail" class="w-full h-full object-cover" loading="lazy" width="720" height="1280">
-                                <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
-                                    <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                        <div class="yt-car-slide">
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
+                                <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="TIsaGrR4e0U" role="button" tabindex="0" aria-label="Play the Character Studio tutorial">
+                                    <img src="https://i.ytimg.com/vi/TIsaGrR4e0U/maxresdefault.jpg" alt="Character Studio tutorial thumbnail" class="w-full h-full object-cover" loading="lazy" width="1280" height="720">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                        <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between gap-2">
+                                    <p class="text-xs font-semibold text-gray-700">Character Studio — micros, macros &amp; export</p>
+                                    <a href="https://youtu.be/TIsaGrR4e0U" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition whitespace-nowrap" aria-label="Watch the Character Studio tutorial on YouTube">Watch on YouTube &rarr;</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-4 flex items-center justify-between">
-                            <p class="text-sm font-semibold text-gray-700">Physics bake short</p>
-                            <a href="https://youtube.com/shorts/XQQAlOLs--Q" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition" aria-label="Watch the SVGMotion short on YouTube">Watch on YouTube &rarr;</a>
+                        <div class="yt-car-slide">
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
+                                <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="unzcFp112Oo" role="button" tabindex="0" aria-label="Play the Asset Studio tutorial">
+                                    <img src="https://i.ytimg.com/vi/unzcFp112Oo/maxresdefault.jpg" alt="Asset Studio tutorial thumbnail" class="w-full h-full object-cover" loading="lazy" width="1280" height="720">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                        <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between gap-2">
+                                    <p class="text-xs font-semibold text-gray-700">Asset Studio — pieces → bundle export</p>
+                                    <a href="https://youtu.be/unzcFp112Oo" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition whitespace-nowrap" aria-label="Watch the Asset Studio tutorial on YouTube">Watch on YouTube &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yt-car-slide">
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300">
+                                <div class="aspect-video w-full yt-facade cursor-pointer relative group" data-yt="7OoTwcL0uiY" role="button" tabindex="0" aria-label="Play the SVGMotion overview and explainer">
+                                    <img src="https://i.ytimg.com/vi/7OoTwcL0uiY/maxresdefault.jpg" alt="SVGMotion overview video thumbnail" class="w-full h-full object-cover" loading="lazy" width="1280" height="720">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                        <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between gap-2">
+                                    <p class="text-xs font-semibold text-gray-700">Overview &amp; explainer</p>
+                                    <a href="https://youtu.be/7OoTwcL0uiY" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition whitespace-nowrap" aria-label="Watch the SVGMotion overview &amp; explainer on YouTube">Watch on YouTube &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yt-car-slide">
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-purple-100 hover:shadow-xl transition duration-300 max-w-xs mx-auto">
+                                <div style="aspect-ratio:9/16">
+                                    <div class="yt-facade cursor-pointer relative group w-full h-full" data-yt="XQQAlOLs--Q" role="button" tabindex="0" aria-label="Play the SVGMotion short video">
+                                        <img src="https://i.ytimg.com/vi/XQQAlOLs--Q/oar2.jpg" alt="SVGMotion short video thumbnail" class="w-full h-full object-cover" loading="lazy" width="720" height="1280">
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition duration-300">
+                                            <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300"><svg class="w-7 h-7 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex items-center justify-between gap-2">
+                                    <p class="text-xs font-semibold text-gray-700">Physics bake short</p>
+                                    <a href="https://youtube.com/shorts/XQQAlOLs--Q" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-purple-700 hover:text-purple-800 transition whitespace-nowrap" aria-label="Watch the SVGMotion short on YouTube">Watch on YouTube &rarr;</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <button type="button" class="yt-car-btn yt-car-prev" aria-label="Previous video">&#8249;</button>
+                    <button type="button" class="yt-car-btn yt-car-next" aria-label="Next video">&#8250;</button>
+                    <div class="yt-car-dots" aria-label="Choose video"></div>
                 </div>
                 <div class="mt-10 text-center">
                     <a href="https://www.producthunt.com/products/svgmotion?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-svgmotion" target="_blank" rel="noopener noreferrer"><img alt="SVGMotion - Interactive Vector Animation for Web, Powered by AI &amp; Physics | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1267224&amp;theme=light&amp;t=1791065359649" loading="lazy" class="inline-block"></a>
@@ -614,6 +675,27 @@ document.querySelectorAll('.yt-facade').forEach(function(el){
   }
   el.addEventListener('click',load);
   el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+});
+document.querySelectorAll('.yt-carousel').forEach(function(car){
+  var track=car.querySelector('.yt-car-track'),slides=track.children.length,
+      prev=car.querySelector('.yt-car-prev'),next=car.querySelector('.yt-car-next'),
+      dotsBox=car.querySelector('.yt-car-dots'),dots=[],i;
+  function step(){return track.children[0].offsetWidth}
+  for(i=0;i<slides;i++){(function(i){
+    var b=document.createElement('button');b.type='button';b.className='yt-car-dot';
+    b.setAttribute('aria-label','Go to video '+(i+1));
+    b.onclick=function(){track.scrollTo({left:step()*i,behavior:'smooth'})};
+    dotsBox.appendChild(b);dots.push(b);})(i)}
+  function sync(){
+    var i=Math.round(track.scrollLeft/step());
+    dots.forEach(function(d,j){d.classList.toggle('on',j===i)});
+    prev.disabled=i<=0;next.disabled=i>=slides-1;
+  }
+  prev.onclick=function(){track.scrollBy({left:-step(),behavior:'smooth'})};
+  next.onclick=function(){track.scrollBy({left:step(),behavior:'smooth'})};
+  track.addEventListener('scroll',function(){requestAnimationFrame(sync)});
+  window.addEventListener('resize',sync);
+  sync();
 });
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d5c39f9ad3df4b03b72918744f0e0b60"}'></script><!-- End Cloudflare Web Analytics -->
