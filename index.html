@@ -82,6 +82,27 @@
         .ftab:hover { color: var(--txt); }
         .ftab.active { color: var(--acc); border-color: var(--acc); }
         .card-shot { display: block; width: 100%; height: 148px; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--line2); margin-bottom: 20px; background: #fff; }
+        /* Cycling screenshot stack — auto-plays a subtle crossfade, pauses on hover */
+        .shotstack { position: relative; display: block; width: 100%; height: 148px; border-radius: 10px; border: 1px solid var(--line2); margin-bottom: 20px; background: #fff; overflow: hidden; }
+        .shotstack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; animation: shotcycle 9s ease-in-out infinite; transition: transform .4s; }
+        .shotstack img:nth-child(2) { animation-delay: 3s; }
+        .shotstack img:nth-child(3) { animation-delay: 6s; }
+        .shotstack:hover img { animation-play-state: paused; transform: scale(1.04); }
+        @keyframes shotcycle { 0%{opacity:0} 6%{opacity:1} 34%{opacity:1} 40%{opacity:0} 100%{opacity:0} }
+        @media (prefers-reduced-motion: reduce) { .shotstack img { animation: none; } .shotstack img:first-child { opacity: 1; } }
+        /* Trust chips */
+        .tchips { display: flex; flex-wrap: wrap; gap: 6px; margin: -6px 0 14px; }
+        .tchip { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--dim); border: 1px solid var(--line); padding: 3px 9px; border-radius: 9999px; }
+        /* Mobile breathing room for interactive embeds */
+        @media (max-width: 640px) { .stage { margin: 0 -6px; } .card-shot, .shotstack { height: 170px; } }
+        /* Sticky app jump bar — pins under the main nav through the detail sections */
+        .app-detail-section { scroll-margin-top: 118px; }
+        .jumpnav { position: sticky; top: 60px; z-index: 40; background: rgba(13,17,23,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+        .jumpnav::-webkit-scrollbar { display: none; }
+        .jumpnav .jn-in { display: flex; align-items: center; gap: 4px; max-width: 80rem; margin: 0 auto; padding: 9px 16px; }
+        .jlink { font-family: var(--mono); font-size: 12px; letter-spacing: .05em; color: var(--dim); padding: 7px 14px; border-radius: 9999px; white-space: nowrap; text-decoration: none; transition: color .2s, background .2s; }
+        .jlink:hover { color: var(--txt); background: var(--panel); }
+        .jlink.jn-acc { color: var(--acc); }
         .chip-acc { color: #c084fc; border-color: rgba(124,58,237,.5); background: rgba(124,58,237,.14); }
 
         /* brand utilities */
@@ -211,7 +232,7 @@
     {"@context":"https://schema.org","@type":"ItemList","name":"Mees AI projects","itemListElement":[
     {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"SVGMotion","url":"https://meesai.net/svgmotion/","applicationCategory":"DesignApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
     {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Read On","url":"https://meesai.net/readon/","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Bitcoin keyHunt","url":"https://bitcoinkeyhunt.meesai.net/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Bitcoin keyHunt","url":"https://bitcoinkeyhunt.meesai.net/","applicationCategory":"UtilitiesApplication","operatingSystem":["Android","Web"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
     {"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Yieldy","url":"https://meesai.net/yieldy/","applicationCategory":"FinanceApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
     {"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Payoff Turbo","url":"https://meesai.net/payoffturbo/","applicationCategory":"FinanceApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
     ]}
@@ -315,11 +336,16 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2">SVGMotion</h3>
                         <p class="dim text-base mb-4 flex-1">AI-assisted SVG animation studio in the browser. Prompt → editable scene → export a plain .svg that stays interactive. Free, local-first, no sign-up.</p>
+                        <div class="tchips"><span class="tchip">open source</span><span class="tchip">local-first</span><span class="tchip">no sign-up</span></div>
                         <span class="mt-auto pt-4 inline-block purp font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
                     <!-- App Card 1: Read On --><a href="/readon/" class="app-card-modern p-8 flex flex-col" data-cat="android">
-                        <img src="/readon/press/shot-card.png" alt="Read On app — article sent to Kindle" class="card-shot" loading="lazy" width="640" height="640">
+                        <div class="shotstack">
+                            <img src="/readon/press/shot-c1.png" alt="Read On app — article saved as clean EPUB" loading="lazy" width="640" height="640">
+                            <img src="/readon/press/shot-c2.png" alt="Read On app — share to Kindle flow" loading="lazy" width="640" height="640">
+                            <img src="/readon/press/shot-c3.png" alt="Read On app — send flow" loading="lazy" width="640" height="640">
+                        </div>
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #00A9F4;">
                                 <span class="text-2xl" role="img" aria-label="Book">📚</span>
@@ -328,10 +354,11 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Read On</h3>
                         <p class="dim text-base mb-4 flex-1">The ultimate reading companion. Effortlessly save web articles and send them to your Kindle as beautifully formatted EPUBs for distraction-free reading.</p>
+                        <div class="tchips"><span class="tchip">free</span><span class="tchip">no ads</span><span class="tchip">no tracking</span></div>
                         <span class="mt-auto pt-4 inline-block text-accent font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
-                    <!-- App Card 2: Bitcoin keyHunt --><a href="https://bitcoinkeyhunt.meesai.net/" class="app-card-modern p-8 flex flex-col" data-cat="web">
+                    <!-- App Card 2: Bitcoin keyHunt --><a href="https://bitcoinkeyhunt.meesai.net/" class="app-card-modern p-8 flex flex-col" data-cat="android">
                         <img src="/keyhunt/preview.png" alt="Bitcoin keyHunt web tool interface" class="card-shot" loading="lazy" width="640" height="400">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #fbbf24;">
@@ -341,11 +368,16 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Bitcoin keyHunt</h3>
                         <p class="dim text-base mb-4 flex-1">A secure utility designed for Bitcoin enthusiasts to manage and explore wallet key spaces with advanced search and generation features.</p>
+                        <div class="tchips"><span class="tchip">no accounts</span><span class="tchip">no tracking</span></div>
                         <span class="mt-4 inline-block amb font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
                     <!-- App Card 3: Yieldy --><a href="/yieldy/" class="app-card-modern p-8 flex flex-col" data-cat="android">
-                        <img src="/yieldy/press/shot-card.png" alt="Yieldy app — dividend portfolio dashboard" class="card-shot" loading="lazy" width="640" height="640">
+                        <div class="shotstack">
+                            <img src="/yieldy/press/shot-c1.png" alt="Yieldy app — dividend portfolio dashboard" loading="lazy" width="640" height="640">
+                            <img src="/yieldy/press/shot-c2.png" alt="Yieldy app — holdings and yields" loading="lazy" width="640" height="640">
+                            <img src="/yieldy/press/shot-c3.png" alt="Yieldy app — income projection" loading="lazy" width="640" height="640">
+                        </div>
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #22c55e;">
                                 <span class="text-2xl" role="img" aria-label="Chart">📈</span>
@@ -354,11 +386,16 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Yieldy</h3>
                         <p class="dim text-base mb-4 flex-1">Smart finance tracking tool. Monitor dividend yields, manage investment portfolios, and project future returns with intuitive visualizations.</p>
+                        <div class="tchips"><span class="tchip">free</span><span class="tchip">no ads</span><span class="tchip">local data</span></div>
                         <span class="mt-4 inline-block grn font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
                     <!-- App Card 4: Payoff Turbo --><a href="/payoffturbo/" class="app-card-modern p-8 flex flex-col" data-cat="android">
-                        <img src="/payoffturbo/press/shot-card.png" alt="Payoff Turbo app — mortgage payoff timeline" class="card-shot" loading="lazy" width="640" height="640">
+                        <div class="shotstack">
+                            <img src="/payoffturbo/press/shot-c1.png" alt="Payoff Turbo app — mortgage payoff timeline" loading="lazy" width="640" height="640">
+                            <img src="/payoffturbo/press/shot-c2.png" alt="Payoff Turbo app — extra repayment scenarios" loading="lazy" width="640" height="640">
+                            <img src="/payoffturbo/press/shot-c3.png" alt="Payoff Turbo app — interest saved breakdown" loading="lazy" width="640" height="640">
+                        </div>
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #ef4444;">
                                 <span class="text-2xl" role="img" aria-label="House">🏠</span>
@@ -367,6 +404,7 @@
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Payoff Turbo</h3>
                         <p class="dim text-base mb-4 flex-1">A powerful debt reduction tool specifically tailored for Aussie Home Loans. Plan your repayments and save years off your mortgage.</p>
+                        <div class="tchips"><span class="tchip">free</span><span class="tchip">no ads</span><span class="tchip">works offline</span></div>
                         <span class="mt-4 inline-block red-t font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
                 </div>
@@ -379,7 +417,19 @@
             </div>
         </section>
 
-        <!-- 3. App Detail Sections (Simulating Subdomains) --><!-- App Detail: SVGMotion --><section id="app-svgmotion" class="app-detail-section alt-sec border-b edge">
+        <!-- 3. App Detail Sections (Simulating Subdomains) --><div class="jumpwrap">
+        <nav class="jumpnav" aria-label="Jump to app">
+            <div class="jn-in">
+                <span class="jlink jn-acc" aria-hidden="true">// jump to:</span>
+                <a class="jlink" href="#app-svgmotion">svgmotion</a>
+                <a class="jlink" href="#app-readon">read on</a>
+                <a class="jlink" href="#app-bitcoinkeyhunt">keyhunt</a>
+                <a class="jlink" href="#app-yieldy">yieldy</a>
+                <a class="jlink" href="#app-payoffturbo">payoff turbo</a>
+                <a class="jlink" href="#about">about</a>
+            </div>
+        </nav>
+        <!-- App Detail: SVGMotion --><section id="app-svgmotion" class="app-detail-section alt-sec border-b edge">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest chip chip-acc rounded-full mb-5">Flagship &middot; Live web app</span>
@@ -1093,6 +1143,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
         </section>
 
 
+        </div>
         <!-- 4. About Section --><section id="about" class="py-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p class="kicker text-center mb-3">// about</p>

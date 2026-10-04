@@ -63,6 +63,8 @@
         .purp { color: #c084fc; }
         .kicker { font-family: var(--mono); font-size: .8rem; letter-spacing: .14em; color: #c084fc; }
         .alt-sec { background: var(--panel2); }
+        .cursor-pointer { cursor: pointer; }
+        .mt-3 { margin-top: .75rem; }
         .edge { border-color: var(--line) !important; }
         .edgep { border-color: rgba(124, 58, 237, .45) !important; }
         .edge-top-p { border-top: 4px solid #a855f7 !important; }
@@ -91,6 +93,15 @@
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SVGMotion","operatingSystem":"Web","applicationCategory":"DesignApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://app.svgmotion.workers.dev/","author":{"@type":"Organization","name":"Mees AI","url":"https://meesai.net"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How do I animate an SVG without Lottie or Rive?","acceptedAnswer":{"@type":"Answer","text":"Describe the scene, tweak the generated layers and keyframes, then export a plain .svg file. The animation is baked into the markup — it plays anywhere an SVG renders, with no player runtime, no Lottie JSON, and no JavaScript dependency."}},
+    {"@type":"Question","name":"Is SVGMotion free?","acceptedAnswer":{"@type":"Answer","text":"Yes — the editor is free and open source, with no accounts and no sign-up. AI features are bring-your-own-key: point it at Ollama for fully local generation, or your own OpenRouter/OpenAI key."}},
+    {"@type":"Question","name":"Where is my work stored?","acceptedAnswer":{"@type":"Answer","text":"Locally, in your browser (IndexedDB/localStorage). Nothing is uploaded to a server — the tool is local-first and works offline once loaded. AI requests go directly from your browser to the provider you configure."}},
+    {"@type":"Question","name":"Can I embed animations on my own site?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export a self-contained .svg and drop it in an <img> tag, or use the embeddable player / shareable /play URLs for scenes that need interactivity."}},
+    {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"The editor works fully offline. For AI generation without internet, run a local model through Ollama — no cloud account required."}}
+    ]}
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XHPLPHL14"></script>
 <script>
@@ -689,6 +700,36 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
                 </div>
                 <div class="mt-10 text-center">
                     <a href="https://www.producthunt.com/products/svgmotion?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-svgmotion" target="_blank" rel="noopener noreferrer"><img alt="SVGMotion - Interactive Vector Animation for Web, Powered by AI &amp; Physics | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1267224&amp;theme=dark&amp;t=1791065359649" loading="lazy" class="inline-block"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 alt-sec">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="kicker text-center mb-3">// faq</p>
+                <h2 class="text-3xl font-extrabold text-center mb-12">Common questions</h2>
+                <div class="space-y-4">
+                    <details class="dk-card p-6">
+                        <summary class="font-semibold txt cursor-pointer">How do I animate an SVG without Lottie or Rive?</summary>
+                        <p class="dim mt-3 text-sm">Describe the scene, tweak the generated layers and keyframes, then export a plain <code>.svg</code> file. The animation is baked into the markup — it plays anywhere an SVG renders, with no player runtime, no Lottie JSON, and no JavaScript dependency.</p>
+                    </details>
+                    <details class="dk-card p-6">
+                        <summary class="font-semibold txt cursor-pointer">Is SVGMotion free?</summary>
+                        <p class="dim mt-3 text-sm">Yes — the editor is free and open source, with no accounts and no sign-up. AI features are bring-your-own-key: point it at Ollama for fully local generation, or your own OpenRouter/OpenAI key.</p>
+                    </details>
+                    <details class="dk-card p-6">
+                        <summary class="font-semibold txt cursor-pointer">Where is my work stored?</summary>
+                        <p class="dim mt-3 text-sm">Locally, in your browser (IndexedDB/localStorage). Nothing is uploaded to a server — the tool is local-first and works offline once loaded. AI requests go directly from your browser to the provider you configure.</p>
+                    </details>
+                    <details class="dk-card p-6">
+                        <summary class="font-semibold txt cursor-pointer">Can I embed animations on my own site?</summary>
+                        <p class="dim mt-3 text-sm">Yes. Export a self-contained <code>.svg</code> and drop it in an <code>&lt;img&gt;</code> tag, or use the embeddable player / shareable <code>/play</code> URLs for scenes that need interactivity.</p>
+                    </details>
+                    <details class="dk-card p-6">
+                        <summary class="font-semibold txt cursor-pointer">Does it work offline?</summary>
+                        <p class="dim mt-3 text-sm">The editor works fully offline. For AI generation without internet, run a local model through Ollama — no cloud account required.</p>
+                    </details>
                 </div>
             </div>
         </section>
