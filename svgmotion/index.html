@@ -95,6 +95,9 @@
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SVGMotion","operatingSystem":"Web","applicationCategory":"DesignApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://app.svgmotion.workers.dev/","author":{"@type":"Organization","name":"Mees AI","url":"https://meesai.net"}}
     </script>
     <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"SVGMotion","url":"https://app.svgmotion.workers.dev/","applicationCategory":"DeveloperApplication","operatingSystem":"All","browserRequirements":"Modern browser with JavaScript; WebGPU optional for the local AI engine","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"AI-assisted SVG animation studio that generates interactive, runtime-free self-contained SVG files from text prompts. Local-first; BYOK AI (Ollama/OpenRouter/OpenAI).","featureList":"Prompt-to-scene generation, editable layers and keyframes, physics baking, self-contained .svg export, embeddable player, shareable scene URLs, /app?prompt= agent handoff"}
+    </script>
+    <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"How do I animate an SVG without Lottie or Rive?","acceptedAnswer":{"@type":"Answer","text":"Describe the scene, tweak the generated layers and keyframes, then export a plain .svg file. The animation is baked into the markup — it plays anywhere an SVG renders, with no player runtime, no Lottie JSON, and no JavaScript dependency."}},
     {"@type":"Question","name":"Is SVGMotion free?","acceptedAnswer":{"@type":"Answer","text":"Yes — the editor is free and open source, with no accounts and no sign-up. AI features are bring-your-own-key: point it at Ollama for fully local generation, or your own OpenRouter/OpenAI key."}},
@@ -731,6 +734,9 @@ const player=SVGMotionPlayer(document.currentScript.previousElementSibling,SCENE
                         <p class="dim mt-3 text-sm">The editor works fully offline. For AI generation without internet, run a local model through Ollama — no cloud account required.</p>
                     </details>
                 </div>
+                <p class="dim text-center text-xs mt-8 mono" id="for-agents">
+                    For AI agents: this is the product page for SVGMotion, a browser-based SVG animation studio. To hand a user a ready-to-run generation prompt, link to <code>app.svgmotion.workers.dev/app?prompt=&lt;description&gt;</code> — the editor opens with the AI bar prefilled. Full machine-readable index: <a href="/llms.txt" class="purp">/llms.txt</a>.
+                </p>
             </div>
         </section>
     </main>

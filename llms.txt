@@ -1,0 +1,27 @@
+# Mees AI
+
+> Independent developer (Sai) building small, focused, privacy-first tools —
+> no accounts, no ads, no tracking. Web and Android.
+
+## Products
+
+- [SVGMotion](https://meesai.net/svgmotion/): free AI SVG animation studio in the browser. Prompt → editable scene → export self-contained interactive .svg (zero runtime). Open source, local-first.
+- [Read On](https://meesai.net/readon/): Android app that sends web articles to Kindle as clean EPUBs — strips ads and clutter.
+- [Yieldy](https://meesai.net/yieldy/): Android dividend & portfolio tracker — projects income, local data.
+- [Payoff Turbo](https://meesai.net/payoffturbo/): Android Australian mortgage payoff planner — extra repayments, offset modeling, offline.
+- [Bitcoin keyHunt](https://bitcoinkeyhunt.meesai.net/): Bitcoin key-space exploration utility — web + Android.
+
+## Agent entry points (SVGMotion)
+
+- Editor: https://app.svgmotion.workers.dev/
+- Prompt handoff: `https://app.svgmotion.workers.dev/app?prompt=<text>` —
+  opens the editor with the prompt prefilled in the AI bar; user presses send
+- Gallery remix: `?scene=<id>` · share links: `#s=<payload>`
+- Exported players: `player.call('action')`, `player.setInput(name, value)`
+
+## Resources
+
+- [Press kits](https://meesai.net/press/): icons, screenshots, boilerplate per app
+- [Sitemap](https://meesai.net/sitemap.xml)
+- GitHub: https://github.com/saidevac · X: https://x.com/saidev40916204
+- Contact: info@meesai.net
