@@ -196,7 +196,14 @@
     <meta property="og:title" content="Mees AI — software that does one thing well">
     <meta property="og:description" content="Indie dev studio by Sai — SVGMotion, Read On, Yieldy, Payoff Turbo, Bitcoin keyHunt.">
     <meta property="og:url" content="https://meesai.net/">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://meesai.net/svgmotion/shot-landing.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"Mees AI","url":"https://meesai.net/","logo":"https://meesai.net/apple-touch-icon.png","sameAs":["https://github.com/saidevac","https://play.google.com/store/apps/developer?id=meesai"]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"Mees AI","url":"https://meesai.net/"}
+    </script>
         <meta name="google-site-verification" content="XO5SoP9FECpfiSn54u5jDyq-IajrlriPPuI-CZ2MH5M" />
     <meta name="google-site-verification" content="gu9EU_4qkokYV9TLoFJtVbXxKmzP8agFs2G20I8Ll2o" />
     <meta name="msvalidate.01" content="9FC1C46A44C1CF4EC492748291FD4F39" />
@@ -216,10 +223,10 @@
     <!-- Navbar --><header class="sticky top-0 z-50 nav-d">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="#" class="mono text-xl font-bold text-white">
-                Mees <span class="text-accent">AI</span><span class="cursor" style="height:.9em"></span>
+                Mees <span class="text-accent">AI</span><span class="cursor" style="height:.9em" aria-hidden="true"></span>
             </a>
             <div class="hidden md:flex space-x-8 font-medium mono" style="font-size:.9rem">
-                <a href="#home" class="dim hover:text-accent transition duration-300">~</a>
+                <a href="#home" class="dim hover:text-accent transition duration-300" aria-label="Home">~</a>
                 <a href="#apps" class="dim hover:text-accent transition duration-300">projects</a>
                 <a href="#about" class="dim hover:text-accent transition duration-300">about</a>
                 <a href="#contact" class="dim hover:text-accent transition duration-300">contact</a>
@@ -251,7 +258,7 @@
                     <div class="term-body">
                         <div><span class="p">sai@mees</span> <span class="d">~</span> $ ls projects/</div>
                         <div><a href="/svgmotion/">svgmotion/</a>    <a href="/readon/">readon/</a>    <a href="/yieldy/">yieldy/</a>    <a href="/payoffturbo/">payoff-turbo/</a>    <a href="https://bitcoinkeyhunt.meesai.net/" target="_blank" rel="noopener noreferrer">bitcoin-keyhunt/</a></div>
-                        <div><span class="p">sai@mees</span> <span class="d">~</span> $ open svgmotion <span class="cursor"></span></div>
+                        <div><span class="p">sai@mees</span> <span class="d">~</span> $ open svgmotion <span class="cursor" aria-hidden="true"></span></div>
                         <div>→ free AI SVG animation studio · runs in your browser</div>
                     </div>
                 </div>
@@ -350,7 +357,7 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
                     <span class="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest chip chip-acc rounded-full mb-5">Flagship &middot; Live web app</span>
-                    <h3 class="text-4xl sm:text-5xl font-extrabold txt mb-3">SVG<span class="purp">Motion</span></h3>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold txt mb-3">SVG<span class="purp">Motion</span></h2>
                     <p class="text-xl font-semibold purp mb-5">Free AI SVG Animation Studio</p>
                     <p class="text-lg dim">
                         Most animation tools lock your output to their runtime — Rive needs .riv, Lottie needs lottie-web. SVGMotion exports a plain, self-contained <code class="codechip">.svg</code> that renders anywhere, yet stays interactive and callable from code.
@@ -361,32 +368,32 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">🎨</div>
-                        <h4 class="font-bold text-lg mb-2">Three studios, one format</h4>
+                        <h3 class="font-bold text-lg mb-2">Three studios, one format</h3>
                         <p class="dim text-sm">Vector Editor for animated scenes, Character Studio for rigged worlds, Asset Studio for OS-ready icon bundles.</p>
                     </div>
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">📞</div>
-                        <h4 class="font-bold text-lg mb-2">Callable exports</h4>
+                        <h3 class="font-bold text-lg mb-2">Callable exports</h3>
                         <p class="dim text-sm">Every .svg embeds a tiny player API — <code class="purp">player.call('launch')</code>, <code class="purp">setInput()</code> — drive it from your code.</p>
                     </div>
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">⚡</div>
-                        <h4 class="font-bold text-lg mb-2">Bake-then-play physics</h4>
+                        <h3 class="font-bold text-lg mb-2">Bake-then-play physics</h3>
                         <p class="dim text-sm">Bounce, roll, pendulum &amp; more are simulated once into ordinary keyframes — no engine ships with your file.</p>
                     </div>
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">🔒</div>
-                        <h4 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h4>
+                        <h3 class="font-bold text-lg mb-2">Local-first &amp; BYOK AI</h3>
                         <p class="dim text-sm">Projects stay in your browser and it works offline. Bring your own Ollama, OpenRouter, or OpenAI key — or the in-browser WebGPU engine.</p>
                     </div>
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">🆓</div>
-                        <h4 class="font-bold text-lg mb-2">Free forever</h4>
+                        <h3 class="font-bold text-lg mb-2">Free forever</h3>
                         <p class="dim text-sm">No sign-up, no ads, no watermarks on exports. Open source under MIT.</p>
                     </div>
                     <div class="dk-card rounded-xl p-6 shadow-md edge-top-p">
                         <div class="text-3xl mb-3">🧩</div>
-                        <h4 class="font-bold text-lg mb-2">Remixable gallery</h4>
+                        <h3 class="font-bold text-lg mb-2">Remixable gallery</h3>
                         <p class="dim text-sm">Every gallery item is a real export — call its methods, preview it, or open it as an editable copy.</p>
                     </div>
                 </div>
@@ -394,7 +401,7 @@
                 <!-- CTA banner -->
                 <div class="rounded-2xl shadow-xl p-8 sm:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6" style="background:linear-gradient(135deg,#7c3aed 0%,#4d36be 100%)">
                     <div>
-                        <h4 class="text-2xl font-bold mb-2">Live now — no install, no account</h4>
+                        <h3 class="text-2xl font-bold mb-2">Live now — no install, no account</h3>
                         <p class="text-purple-100 max-w-xl">Runs entirely in your browser. Type a prompt like &ldquo;a rocket that launches on click&rdquo;, edit it, export a callable .svg.</p>
                     </div>
                     <div class="flex flex-wrap gap-3 shrink-0">
@@ -405,7 +412,7 @@
 
                 <!-- Live gallery — real interactive .svg exports embedded directly -->
                 <div class="mt-14">
-                    <h4 class="text-2xl font-bold text-center mb-2">Live from the gallery</h4>
+                    <h3 class="text-2xl font-bold text-center mb-2">Live from the gallery</h3>
                     <p class="text-center dim mb-8">These are real SVGMotion exports running on this page — each one a plain <code>.svg</code> scene, no runtime, no iframe. Hover and click them.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
 <div class="dk-card rounded-xl shadow-md p-3 border edgep hover:shadow-xl transition duration-300">
@@ -824,7 +831,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
 
                 <!-- Demo videos — carousel: studio tutorials first, then overview + short -->
                 <div class="mt-14">
-                    <h4 class="text-2xl font-bold text-center mb-2">See SVGMotion in action</h4>
+                    <h3 class="text-2xl font-bold text-center mb-2">See SVGMotion in action</h3>
                     <p class="text-center dim mb-8">Step-by-step walkthroughs of each studio, plus a quick overview.</p>
                     <style>
                     .yt-car-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none}
@@ -925,7 +932,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
 
 <!-- App Detail: Read On --><section id="app-readon" class="app-detail-section border-b edge">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold text-accent mb-6">Read On - Distraction-Free Reading Delivered</h3>
+                <h2 class="text-4xl font-bold text-accent mb-6">Read On - Distraction-Free Reading Delivered</h2>
                 <p class="text-xl mb-8 txt">
                     The internet is full of amazing content, but also endless distractions. Read On cuts through the noise. It's built for the discerning reader who values deep focus. Our proprietary conversion engine strips away ads, pop-ups, and extraneous elements, converting complex web pages into clean, perfectly formatted EPUB files.
                 </p>
@@ -938,7 +945,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
                     </ul>
                     <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#00A9F4 0%,#0077b6 100%)">
                         <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Read On on Google Play</h4>
+                            <h3 class="text-2xl font-semibold mb-3">Get Read On on Google Play</h3>
                             <p class="text-white/85 mb-6">Free on Android. Save an article from any browser and it lands on your Kindle, beautifully typeset.</p>
                         </div>
                         <a aria-label="View Read On on Google Play" href="https://play.google.com/store/apps/details?id=sai.meesai.readon" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
@@ -950,7 +957,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
     <!-- App Detail: Bitcoin keyHunt --><section id="app-bitcoinkeyhunt" class="app-detail-section alt-sec border-b edge py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h3 class="text-4xl font-bold amb mb-6">Bitcoin keyHunt - The Cryptographic Utility</h3>
+        <h2 class="text-4xl font-bold amb mb-6">Bitcoin keyHunt - The Cryptographic Utility</h2>
         
         <p class="text-xl mb-12 txt">
             Built for the advanced user, Bitcoin keyHunt provides powerful, secure, and offline tools for interacting with the Bitcoin cryptographic space. Below, you can find the app link and two videos detailing the mystery of the 32 BTC puzzles and how the tool helps you explore them.
@@ -959,7 +966,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             
             <div class="p-6 dk-card rounded-xl shadow-lg flex flex-col justify-center items-center edge-top-y hover:shadow-2xl transition duration-300">
-                <h4 class="text-2xl font-semibold mb-6 txt">Get the App</h4>
+                <h3 class="text-2xl font-semibold mb-6 txt">Get the App</h3>
                 <a href="https://play.google.com/store/apps/details?id=com.saidev.bitcoinkeyhunt" target="_blank" rel="noopener" class="block">
                     <img 
                         alt="Get it on Google Play" 
@@ -981,7 +988,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
                 </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2 txt">Bitcoin keyHunt Treasure Map</h4>
+                    <h3 class="text-xl font-semibold mb-2 txt">Bitcoin keyHunt Treasure Map</h3>
                     <p class="text-sm amb mb-3">Channel: saidev</p>
                     <p class="dim text-base">
                         This video introduces the concept of the <strong>digital treasure hunt</strong> for the legendary 32 Bitcoin puzzles. It outlines the app's core philosophy—<strong>no ads, no tracking</strong>—and highlights its features like <strong>grid-based exploration</strong> and on-chain status checks.
@@ -1000,7 +1007,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
                 </div>
                 </div>
                 <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2 txt">Bitcoin KeyHunt Guide</h4>
+                    <h3 class="text-xl font-semibold mb-2 txt">Bitcoin KeyHunt Guide</h3>
                     <p class="text-sm amb mb-3">Channel: saidev</p>
                     <p class="dim text-base">
                         Learn the practical steps of the app's workflow. The guide demonstrates how to use the <strong>visual bit grid</strong> to assemble a potential private key and how the <strong>one-tap on-chain check</strong> instantly verifies its status, all while emphasizing <strong>local-first privacy</strong>.
@@ -1015,7 +1022,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
 
         <!-- App Detail: Yieldy --><section id="app-yieldy" class="app-detail-section border-b edge">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold grn mb-6">Yieldy - Your Investment Portfolio Planner</h3>
+                <h2 class="text-4xl font-bold grn mb-6">Yieldy - Your Investment Portfolio Planner</h2>
                 <p class="text-xl mb-8 txt">
                     Yieldy is the smart way to visualize and optimize your passive income streams. Forget complex spreadsheets; Yieldy gives you a clean, real-time overview of your dividends and fixed-income assets. Set goals, track performance against benchmarks, and make data-driven decisions to grow your wealth.
                 </p>
@@ -1027,7 +1034,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
                     </ul>
                     <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#22c55e 0%,#15803d 100%)">
                         <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Yieldy on Google Play</h4>
+                            <h3 class="text-2xl font-semibold mb-3">Get Yieldy on Google Play</h3>
                             <p class="text-white/85 mb-6">Track dividends, project income, and plan your portfolio — free on Android.</p>
                         </div>
                         <a aria-label="View Yieldy on Google Play" href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
@@ -1038,7 +1045,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
 
         <!-- App Detail: Payoff Turbo --><section id="app-payoffturbo" class="app-detail-section alt-sec border-b edge">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-4xl font-bold red-t mb-6">Payoff Turbo - Aussie Home Loan Accelerator</h3>
+                <h2 class="text-4xl font-bold red-t mb-6">Payoff Turbo - Aussie Home Loan Accelerator</h2>
                 <p class="text-xl mb-8 txt">
                     Targeted specifically at the nuances of Australian mortgages, Payoff Turbo helps you find the fastest route to financial freedom. Input your current loan details, explore extra repayment scenarios, and instantly see how much interest and time you can save. It's the essential tool for every Australian homeowner looking to beat the bank.
                 </p>
@@ -1050,7 +1057,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
                     </ul>
                     <div class="p-8 rounded-xl shadow-lg text-white flex flex-col justify-between" style="background:linear-gradient(135deg,#ef4444 0%,#b91c1c 100%)">
                         <div>
-                            <h4 class="text-2xl font-semibold mb-3">Get Payoff Turbo on Google Play</h4>
+                            <h3 class="text-2xl font-semibold mb-3">Get Payoff Turbo on Google Play</h3>
                             <p class="text-white/85 mb-6">Model extra repayments and see the day your mortgage hits zero — free on Android.</p>
                         </div>
                         <a aria-label="View Payoff Turbo on Google Play" href="https://play.google.com/store/apps/developer?id=meesai" target="_blank" rel="noopener noreferrer" class="self-start px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">View on Google Play &rarr;</a>
