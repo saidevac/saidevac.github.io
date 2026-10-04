@@ -1021,7 +1021,7 @@ let _el=document.currentScript.previousElementSibling;let _init=function(){SVGMo
 document.querySelectorAll('.yt-facade').forEach(function(el){
   function load(){
     var f=document.createElement('iframe');
-    f.className='w-full h-full';
+    f.className='aspect-video w-full';
     f.src='https://www.youtube.com/embed/'+el.dataset.yt+'?autoplay=1';
     f.title='YouTube video player';
     f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
