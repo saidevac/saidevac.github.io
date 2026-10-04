@@ -38,7 +38,7 @@
             --line: #21262d;      /* hairline */
             --line2: #30363d;     /* card border */
             --txt: #e6edf3;       /* primary text */
-            --dim: #8b949e;       /* secondary text */
+            --dim: #a5b1bd;       /* secondary text (AAA-ish on --ink) */
             --acc: #58a6ff;       /* link/accent blue */
             --acc-btn: #1f6feb;   /* button */
             --acc-btn-h: #388bfd; /* button hover */
@@ -78,6 +78,10 @@
         .codechip { font-family: var(--mono); font-size: .9em; background: rgba(124,58,237,.16); color: #c084fc; border-radius: 6px; padding: 1px 6px; }
         .ghp:hover { background: rgba(124,58,237,.16); }
         .chip { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; padding: 3px 10px; border-radius: 9999px; border: 1px solid var(--line2); color: var(--dim); background: rgba(1,4,9,.4); }
+        .ftab { font-family: var(--mono); font-size: 13px; letter-spacing: .06em; padding: 10px 22px; min-height: 44px; border-radius: 9999px; border: 1px solid var(--line2); color: var(--dim); background: var(--panel); cursor: pointer; transition: color .2s, border-color .2s; }
+        .ftab:hover { color: var(--txt); }
+        .ftab.active { color: var(--acc); border-color: var(--acc); }
+        .card-shot { display: block; width: 100%; height: 148px; object-fit: cover; object-position: top; border-radius: 10px; border: 1px solid var(--line2); margin-bottom: 20px; background: #fff; }
         .chip-acc { color: #c084fc; border-color: rgba(124,58,237,.5); background: rgba(124,58,237,.14); }
 
         /* brand utilities */
@@ -204,6 +208,15 @@
     {"@context":"https://schema.org","@type":"Organization","name":"Mees AI","url":"https://meesai.net/","logo":"https://meesai.net/apple-touch-icon.png","sameAs":["https://github.com/saidevac","https://x.com/saidev40916204","https://play.google.com/store/apps/developer?id=meesai"]}
     </script>
     <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ItemList","name":"Mees AI projects","itemListElement":[
+    {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"SVGMotion","url":"https://meesai.net/svgmotion/","applicationCategory":"DesignApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
+    {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"Read On","url":"https://meesai.net/readon/","applicationCategory":"UtilitiesApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"Bitcoin keyHunt","url":"https://bitcoinkeyhunt.meesai.net/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"SoftwareApplication","name":"Yieldy","url":"https://meesai.net/yieldy/","applicationCategory":"FinanceApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}},
+    {"@type":"ListItem","position":5,"item":{"@type":"SoftwareApplication","name":"Payoff Turbo","url":"https://meesai.net/payoffturbo/","applicationCategory":"FinanceApplication","operatingSystem":"Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
+    ]}
+    </script>
+    <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebSite","name":"Mees AI","url":"https://meesai.net/"}
     </script>
         <meta name="google-site-verification" content="XO5SoP9FECpfiSn54u5jDyq-IajrlriPPuI-CZ2MH5M" />
@@ -284,9 +297,16 @@
                     Small tools, each doing one job. Android apps live on Google Play; SVGMotion runs entirely in the browser.
                 </p>
 
+                <div class="flex justify-center gap-3 mb-12 flex-wrap" id="projFilters">
+                    <button type="button" class="ftab active" data-f="all">all</button>
+                    <button type="button" class="ftab" data-f="web">web</button>
+                    <button type="button" class="ftab" data-f="android">android</button>
+                </div>
+
                 <!-- Apps Grid --><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                    <!-- App Card 0: SVGMotion (featured) --><a href="/svgmotion/" class="app-card-modern p-8 border-2 edgep flex flex-col">
+                    <!-- App Card 0: SVGMotion (featured) --><a href="/svgmotion/" class="app-card-modern p-8 border-2 edgep flex flex-col" data-cat="web">
+                        <img src="/svgmotion/shot-card.png" alt="SVGMotion editor — SVG animation timeline and layers" class="card-shot" loading="lazy" width="640" height="400">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #7c3aed;">
                                 <span class="text-2xl" role="img" aria-label="Sparkles">✦</span>
@@ -298,7 +318,8 @@
                         <span class="mt-auto pt-4 inline-block purp font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
-                    <!-- App Card 1: Read On --><a href="/readon/" class="app-card-modern p-8 flex flex-col">
+                    <!-- App Card 1: Read On --><a href="/readon/" class="app-card-modern p-8 flex flex-col" data-cat="android">
+                        <img src="/readon/press/shot-card.png" alt="Read On app — article sent to Kindle" class="card-shot" loading="lazy" width="640" height="640">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #00A9F4;">
                                 <span class="text-2xl" role="img" aria-label="Book">📚</span>
@@ -310,7 +331,8 @@
                         <span class="mt-auto pt-4 inline-block text-accent font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
-                    <!-- App Card 2: Bitcoin keyHunt --><a href="https://bitcoinkeyhunt.meesai.net/" class="app-card-modern p-8 flex flex-col">
+                    <!-- App Card 2: Bitcoin keyHunt --><a href="https://bitcoinkeyhunt.meesai.net/" class="app-card-modern p-8 flex flex-col" data-cat="web">
+                        <img src="/keyhunt/preview.png" alt="Bitcoin keyHunt web tool interface" class="card-shot" loading="lazy" width="640" height="400">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #fbbf24;">
                                 <span class="text-2xl" role="img" aria-label="Key">🔑</span>
@@ -322,7 +344,8 @@
                         <span class="mt-4 inline-block amb font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
-                    <!-- App Card 3: Yieldy --><a href="/yieldy/" class="app-card-modern p-8 flex flex-col">
+                    <!-- App Card 3: Yieldy --><a href="/yieldy/" class="app-card-modern p-8 flex flex-col" data-cat="android">
+                        <img src="/yieldy/press/shot-card.png" alt="Yieldy app — dividend portfolio dashboard" class="card-shot" loading="lazy" width="640" height="640">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #22c55e;">
                                 <span class="text-2xl" role="img" aria-label="Chart">📈</span>
@@ -334,7 +357,8 @@
                         <span class="mt-4 inline-block grn font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
-                    <!-- App Card 4: Payoff Turbo --><a href="/payoffturbo/" class="app-card-modern p-8 flex flex-col">
+                    <!-- App Card 4: Payoff Turbo --><a href="/payoffturbo/" class="app-card-modern p-8 flex flex-col" data-cat="android">
+                        <img src="/payoffturbo/press/shot-card.png" alt="Payoff Turbo app — mortgage payoff timeline" class="card-shot" loading="lazy" width="640" height="640">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #ef4444;">
                                 <span class="text-2xl" role="img" aria-label="House">🏠</span>
@@ -1149,5 +1173,17 @@ document.querySelectorAll('.yt-carousel').forEach(function(car){
 });
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d5c39f9ad3df4b03b72918744f0e0b60"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+// Project filter tabs
+document.querySelectorAll('#projFilters .ftab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#projFilters .ftab').forEach(function(x){x.classList.toggle('active',x===b);});
+    var f=b.dataset.f;
+    document.querySelectorAll('#apps .app-card-modern').forEach(function(c){
+      c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';
+    });
+  });
+});
+</script>
 </body>
 </html>
