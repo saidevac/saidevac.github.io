@@ -1,0 +1,107 @@
+{
+  "apps": {
+    "svgmotion": {
+      "name": "SVGMotion",
+      "url": "https://meesai.net/svgmotion/",
+      "app_url": "https://app.svgmotion.workers.dev/",
+      "press": "https://app.svgmotion.workers.dev/press",
+      "icon": "svgmotion/icon-512.png",
+      "shots": ["svgmotion/shot-editor.png", "svgmotion/shot-landing.png", "svgmotion/shot-gallery.png"],
+      "tagline": "Free AI SVG animation studio",
+      "x_post": "Shipped SVGMotion — a free AI SVG animation studio in the browser.\n\nPrompt → editable scene → export a plain .svg that stays interactive. No runtime, no sign-up, fully local-first.\n\nhttps://meesai.net/svgmotion/",
+      "linkedin_post": "I built SVGMotion — a free, open-source AI SVG animation studio that runs entirely in the browser.\n\nDescribe a scene, get editable layers + keyframes, then export a plain .svg file whose animation is baked into the markup. No Lottie JSON, no player runtime, no sign-up — and it's local-first (your work never leaves the browser; AI is bring-your-own-key, or fully local via Ollama).\n\nTry it: https://meesai.net/svgmotion/",
+      "reddit": {
+        "subs": ["webdev", "SideProject", "svg", "web_design", "lovable"],
+        "title_options": [
+          "I built a free AI SVG animation studio that exports plain .svg files — no runtime needed",
+          "Show: SVGMotion — prompt to animated SVG, local-first, exports self-contained .svg"
+        ],
+        "body": "Hey — I built SVGMotion, a free AI-assisted SVG animation studio.\n\nWhat it does: you describe a scene, it generates editable layers + keyframes, and you export a plain `.svg` file. The animation is baked into the markup — it plays in any `<img>` tag with no player JS, no Lottie JSON.\n\nWhy I built it: I wanted Rive-style iteration without the runtime dependency or the pricing.\n\nStack notes: browser-native ES modules, BYOK AI (Ollama/OpenRouter/OpenAI), local-first storage in IndexedDB. Fully open source.\n\nSite: https://meesai.net/svgmotion/\nLive editor: https://app.svgmotion.workers.dev/\nSource: https://github.com/saidevac\n\nFeedback welcome — especially on the export format."
+      },
+      "showhn": {
+        "title_options": [
+          "Show HN: SVGMotion — AI SVG animation studio that exports runtime-free .svg files",
+          "Show HN: Local-first AI SVG animator — export plain .svg, no player needed"
+        ],
+        "text": "Hi HN — I built SVGMotion, an AI-assisted SVG animation studio.\n\nThe pitch: describe a scene, edit the generated layers/keyframes/physics, and export a plain .svg file. The animation is baked into the markup — plays anywhere an SVG renders, zero runtime.\n\nIt's local-first (browser IndexedDB), open source, and the AI is BYOK — works fully offline with Ollama.\n\nEditor: https://app.svgmotion.workers.dev/\nProduct page: https://meesai.net/svgmotion/\n\nHappy to answer questions about the baking/export approach."
+      }
+    },
+    "readon": {
+      "name": "Read On",
+      "url": "https://meesai.net/readon/",
+      "play": "https://play.google.com/store/apps/details?id=sai.meesai.readon",
+      "press": "https://meesai.net/readon/press/",
+      "icon": "readon/press/icon-512.png",
+      "shots": ["readon/press/shot-1.png", "readon/press/shot-2.png", "readon/press/shot-3.png"],
+      "tagline": "Send web articles to Kindle",
+      "x_post": "Read On — free Android app that sends any web article to your Kindle as a clean EPUB.\n\nShare from any browser → strips ads/pop-ups → lands in your Kindle library. No ads, no tracking.\n\nhttps://meesai.net/readon/",
+      "linkedin_post": "I built Read On — a free Android companion that sends web articles to your Kindle as clean, formatted EPUBs.\n\nShare a page from any browser and it strips the ads, pop-ups, and clutter, delivering a distraction-free file straight to your Kindle library. Free, no ads, no tracking.\n\nhttps://meesai.net/readon/",
+      "reddit": {
+        "subs": ["kindle", "ebooks", "androidapps", "productivity"],
+        "title_options": [
+          "Free app: send any web article to your Kindle as a clean EPUB (strips ads)",
+          "I made Read On — share a page from any browser, get a distraction-free EPUB on Kindle"
+        ],
+        "body": "I built Read On, a free Android app that sends web articles to Kindle.\n\nShare a page from any browser → it strips ads/pop-ups/boilerplate → delivers a formatted EPUB to your Kindle library. Queue management, offline reading, no ads, no tracking.\n\nPlay Store: https://play.google.com/store/apps/details?id=sai.meesai.readon\nSite: https://meesai.net/readon/\n\nHappy to hear feature requests."
+      },
+      "showhn": null
+    },
+    "yieldy": {
+      "name": "Yieldy",
+      "url": "https://meesai.net/yieldy/",
+      "play": "https://play.google.com/store/apps/details?id=com.saidev.yieldy.calc",
+      "press": "https://meesai.net/yieldy/press/",
+      "icon": "yieldy/press/icon-512.png",
+      "shots": ["yieldy/press/shot-1.png", "yieldy/press/shot-2.png", "yieldy/press/shot-3.png"],
+      "tagline": "Dividend & portfolio tracker",
+      "x_post": "Yieldy — free Android app for tracking dividend income.\n\nProject monthly/annual income from your holdings, visualize allocation, set goals. Local data, no ads.\n\nhttps://meesai.net/yieldy/",
+      "linkedin_post": "I built Yieldy — a free Android app for visualizing and projecting dividend income.\n\nTrack holdings, project monthly and annual income, monitor allocation and growth — all local, no ads, no tracking.\n\nhttps://meesai.net/yieldy/",
+      "reddit": {
+        "subs": ["dividends", "personalfinance", "androidapps", "financialindependence"],
+        "title_options": [
+          "Free Android app to track & project dividend income (local data, no ads)",
+          "I made Yieldy — visualize your passive income and forecast growth"
+        ],
+        "body": "I built Yieldy, a free Android app for dividend investors.\n\nProject monthly/annual income from current holdings, visualize allocation, set goals, track vs benchmarks. Data stays on-device — no accounts, no ads.\n\nPlay Store: https://play.google.com/store/apps/details?id=com.saidev.yieldy.calc\nSite: https://meesai.net/yieldy/"
+      },
+      "showhn": null
+    },
+    "payoffturbo": {
+      "name": "Payoff Turbo",
+      "url": "https://meesai.net/payoffturbo/",
+      "play": "https://play.google.com/store/apps/details?id=com.saidev.homeloan.calc",
+      "press": "https://meesai.net/payoffturbo/press/",
+      "icon": "payoffturbo/press/icon-512.png",
+      "shots": ["payoffturbo/press/shot-1.png", "payoffturbo/press/shot-2.png", "payoffturbo/press/shot-3.png"],
+      "tagline": "Australian mortgage payoff planner",
+      "x_post": "Payoff Turbo — free Android app for Australian mortgages.\n\nTest extra repayments + offset scenarios, see the exact date your loan hits zero. Works offline, no ads.\n\nhttps://meesai.net/payoffturbo/",
+      "linkedin_post": "I built Payoff Turbo — a free Android app for Australian homeowners.\n\nModel extra repayments and offset accounts the way Aussie loans actually work, and instantly see the interest and years you save. Free, works offline, no ads.\n\nhttps://meesai.net/payoffturbo/",
+      "reddit": {
+        "subs": ["AusFinance", "australian", "androidapps", "personalfinance"],
+        "title_options": [
+          "Free app for Australian mortgages: model extra repayments + offset, see your payoff date",
+          "I made Payoff Turbo — beat the bank on an Aussie home loan"
+        ],
+        "body": "I built Payoff Turbo, a free Android app for Aussie mortgages.\n\nInput your loan, test lump sums or higher repayment frequency, model offset/redraw — and see the exact date your mortgage hits zero under each plan. Works offline, no ads.\n\nPlay Store: https://play.google.com/store/apps/details?id=com.saidev.homeloan.calc\nSite: https://meesai.net/payoffturbo/"
+      },
+      "showhn": null
+    },
+    "keyhunt": {
+      "name": "Bitcoin keyHunt",
+      "url": "https://bitcoinkeyhunt.meesai.net/",
+      "icon": "keyhunt/preview.png",
+      "shots": ["keyhunt/preview.png"],
+      "tagline": "Bitcoin key space explorer",
+      "x_post": "Bitcoin keyHunt — a utility for exploring BTC key spaces with advanced search + generation.\n\nWeb + Android, no accounts, no tracking.\n\nhttps://bitcoinkeyhunt.meesai.net/",
+      "linkedin_post": "I built Bitcoin keyHunt — a utility for exploring Bitcoin wallet key spaces with advanced search and generation features. Available on web and Android.\n\nhttps://bitcoinkeyhunt.meesai.net/",
+      "reddit": {
+        "subs": ["Bitcoin", "CryptoCurrency", "androidapps"],
+        "title_options": [
+          "Bitcoin keyHunt — explore BTC key spaces with advanced search (web + Android)"
+        ],
+        "body": "I built Bitcoin keyHunt, a utility for exploring Bitcoin wallet key spaces — advanced search and generation features, on web and Android. No accounts, no tracking.\n\nhttps://bitcoinkeyhunt.meesai.net/"
+      },
+      "showhn": null
+    }
+  }
+}

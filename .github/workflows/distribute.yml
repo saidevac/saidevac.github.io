@@ -1,0 +1,73 @@
+name: Distribute release kit
+
+# Fires when a GitHub Release is published (tag like `svgmotion-v1.2` picks
+# that app; anything else builds the kit for all apps), or manually via
+# Actions → "Distribute release kit" → Run workflow.
+# Zero secrets required: the kit is posted as a GitHub Issue and uploaded
+# as a workflow artifact. Optional: set DISCORD_WEBHOOK or TELEGRAM_TOKEN +
+# TELEGRAM_CHAT_ID secrets to get a ping there too.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App slug from releases.json (or "all")'
+        required: false
+        default: 'all'
+
+permissions:
+  issues: write
+
+jobs:
+  kit:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve app slug
+        id: app
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${{ github.event.release.tag_name }}"
+            SLUG="${TAG%%-*}"
+            grep -q "\"$SLUG\"" releases.json && echo "slug=$SLUG" >> "$GITHUB_OUTPUT" || echo "slug=all" >> "$GITHUB_OUTPUT"
+          else
+            echo "slug=${{ github.event.inputs.app || 'all' }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build distribution kit
+        run: node tools/dist-kit.js "${{ steps.app.outputs.slug }}" --out dist-kit
+
+      - name: Open distribution-kit issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="📣 Distribution kit — ${{ github.event.release.name || steps.app.outputs.slug }} ($(date +%Y-%m-%d))"
+          gh issue create --title "$TITLE" --body-file dist-kit/issue-body.md \
+            --label "distribution" 2>/dev/null \
+          || gh issue create --title "$TITLE" --body-file dist-kit/issue-body.md
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-kit-${{ steps.app.outputs.slug }}
+          path: dist-kit/
+
+      - name: Ping Discord (if DISCORD_WEBHOOK secret set)
+        if: env.DISCORD_WEBHOOK != ''
+        run: |
+          MSG="📣 New release kit ready — check the repo issues for paste-ready posts: ${{ github.event.release.html_url || 'manual run' }}"
+          curl -s -X POST "$DISCORD_WEBHOOK" -H 'Content-Type: application/json' \
+            -d "{\"content\":\"$MSG\"}"
+
+      - name: Ping Telegram (if TELEGRAM_* secrets set)
+        if: env.TELEGRAM_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
+        run: |
+          MSG="📣 New release kit ready — paste-ready posts are in the repo issues."
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage" \
+            -d "chat_id=$TELEGRAM_CHAT_ID" -d "text=$MSG"
