@@ -71,6 +71,7 @@
         .alt-sec { background: var(--panel2); }
         .edge { border-color: var(--line) !important; }
         .edgep { border-color: rgba(124, 58, 237, .45) !important; }
+        .edgea { border-color: rgba(255, 159, 46, .45) !important; }
         .site-foot { border-top: 1px solid var(--line); }
         .stage { background: #f8fafc; border-radius: 10px; }
         .edge-top-p { border-top: 4px solid #a855f7 !important; }
@@ -105,6 +106,7 @@
         .jlink.jn-acc { color: var(--acc); }
         .chip-acc { color: #c084fc; border-color: rgba(124,58,237,.5); background: rgba(124,58,237,.14); }
         .chip-mint { color: #6ee7a8; border-color: rgba(61,220,132,.5); background: rgba(61,220,132,.14); }
+        .chip-amb { color: #ffc87a; border-color: rgba(255,159,46,.5); background: rgba(255,159,46,.14); }
 
         /* brand utilities */
         .bg-primary { background-color: #010409; }
@@ -328,18 +330,18 @@
 
                 <!-- Apps Grid --><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                    <!-- App Card 0: SVGMotion (featured) --><a href="/svgmotion/" class="app-card-modern p-8 border-2 edgep flex flex-col" data-cat="web">
+                    <!-- App Card 0: SVGMotion (featured) --><a href="/svgmotion/" class="app-card-modern p-8 border-2 edgea flex flex-col" data-cat="web">
                         <img src="/svgmotion/shot-card.png" alt="SVGMotion editor — SVG animation timeline and layers" class="card-shot" loading="lazy" width="640" height="400">
                         <div class="flex items-center justify-between mb-6">
                             <div class="app-icon-circle mb-0" style="color: #ff9f2e;">
                                 <span class="text-2xl" role="img" aria-label="Sparkles">✦</span>
                             </div>
-                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide chip chip-acc rounded-full">New · Live</span>
+                            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide chip chip-amb rounded-full">New · Live</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">SVGMotion</h3>
                         <p class="dim text-base mb-4 flex-1">AI-assisted SVG animation studio in the browser. Prompt → editable scene → export a plain .svg that stays interactive. Free, local-first, no sign-up.</p>
                         <div class="tchips"><span class="tchip">open source</span><span class="tchip">local-first</span><span class="tchip">no sign-up</span></div>
-                        <span class="mt-auto pt-4 inline-block purp font-semibold text-sm">Visit product page &rarr;</span>
+                        <span class="mt-auto pt-4 inline-block amb font-semibold text-sm">Visit product page &rarr;</span>
                     </a>
 
                     <!-- App Card 1: VibeScout --><a href="https://vibescout.meesai.net/" class="app-card-modern p-8 flex flex-col" data-cat="web">
